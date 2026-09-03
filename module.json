@@ -17,7 +17,9 @@
   },
 
   "esmodules": [
-    "scripts/pocket-rule.js"
+    "scripts/pocket-rule.js",
+    "scripts/rule-search.js",
+    "scripts/rule-viewer.js"
   ],
 
   "styles": [
