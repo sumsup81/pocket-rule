@@ -1,7 +1,7 @@
 /**
  * Pocket Rule
  * Main module initialization, ApplicationV2 window,
- * search integration, rule viewer, and toolbar integration.
+ * JSON rule library, search, viewer, and toolbar integration.
  */
 
 import {
@@ -19,6 +19,10 @@ const MODULE_ID =
   "pocket-rule";
 
 
+const RULES_URL =
+  "modules/pocket-rule/data/rules-glossary.json";
+
+
 const SEARCH_TEMPLATE =
   "modules/pocket-rule/templates/search.hbs";
 
@@ -34,7 +38,100 @@ const {
 
 
 /* ------------------------------------------------------------ */
-/*  Pocket Rule Application                                     */
+/*  RULE LIBRARY                                                */
+/* ------------------------------------------------------------ */
+
+let ruleLibrary =
+  [];
+
+
+let ruleLibraryPromise =
+  null;
+
+
+/**
+ * Load the Pocket Rule JSON database.
+ *
+ * The promise is cached so Foundry does not repeatedly
+ * download the same file every time Pocket Rule opens.
+ */
+
+async function loadRuleLibrary() {
+
+  if (
+    Array.isArray(
+      ruleLibrary
+    ) &&
+    ruleLibrary.length
+  ) {
+
+    return ruleLibrary;
+  }
+
+
+  if (ruleLibraryPromise) {
+
+    return ruleLibraryPromise;
+  }
+
+
+  ruleLibraryPromise =
+    fetch(RULES_URL)
+      .then(response => {
+
+        if (!response.ok) {
+
+          throw new Error(
+            `Unable to load rules glossary: ${response.status}`
+          );
+        }
+
+
+        return response.json();
+      })
+      .then(data => {
+
+        if (!Array.isArray(data)) {
+
+          throw new Error(
+            "rules-glossary.json must contain a JSON array."
+          );
+        }
+
+
+        ruleLibrary =
+          data;
+
+
+        console.log(
+          `Pocket Rule | Loaded ${ruleLibrary.length} rules`
+        );
+
+
+        return ruleLibrary;
+      })
+      .catch(error => {
+
+        ruleLibraryPromise =
+          null;
+
+
+        console.error(
+          "Pocket Rule | Failed to load rules glossary",
+          error
+        );
+
+
+        throw error;
+      });
+
+
+  return ruleLibraryPromise;
+}
+
+
+/* ------------------------------------------------------------ */
+/*  APPLICATION                                                 */
 /* ------------------------------------------------------------ */
 
 class PocketRuleApplication
@@ -62,10 +159,17 @@ class PocketRuleApplication
     },
 
     window: {
-      title: "Pocket Rule",
-      icon: "fa-solid fa-book-open",
-      resizable: true,
-      minimizable: true
+      title:
+        "Pocket Rule",
+
+      icon:
+        "fa-solid fa-book-open",
+
+      resizable:
+        true,
+
+      minimizable:
+        true
     }
   };
 
@@ -79,19 +183,19 @@ class PocketRuleApplication
   };
 
 
-  constructor(options = {}) {
+  constructor(
+    options = {}
+  ) {
 
     super(options);
 
-    /*
-     * null means we are viewing the search screen.
-     *
-     * A rule object means we are viewing that rule.
-     */
 
-    this.selectedRule = null;
+    this.selectedRule =
+      null;
 
-    this.searchController = null;
+
+    this.searchController =
+      null;
   }
 
 
@@ -99,10 +203,14 @@ class PocketRuleApplication
   /*  CHOOSE TEMPLATE                                           */
   /* ---------------------------------------------------------- */
 
-  _configureRenderParts(options) {
+  _configureRenderParts(
+    options
+  ) {
 
     const parts =
-      super._configureRenderParts(options);
+      super._configureRenderParts(
+        options
+      );
 
 
     if (parts.main) {
@@ -122,20 +230,28 @@ class PocketRuleApplication
   /*  PREPARE DATA                                              */
   /* ---------------------------------------------------------- */
 
-  async _prepareContext(options) {
+  async _prepareContext(
+    options
+  ) {
 
     const context =
-      await super._prepareContext(options);
+      await super._prepareContext(
+        options
+      );
 
 
-    if (!this.selectedRule) {
+    if (
+      !this.selectedRule
+    ) {
+
       return context;
     }
 
 
     const viewerContext =
       prepareRuleView(
-        this.selectedRule
+        this.selectedRule,
+        ruleLibrary
       );
 
 
@@ -161,11 +277,9 @@ class PocketRuleApplication
     );
 
 
-    /*
-     * If a rule is selected, activate viewer controls.
-     */
-
-    if (this.selectedRule) {
+    if (
+      this.selectedRule
+    ) {
 
       this._activateRuleViewer();
 
@@ -173,16 +287,12 @@ class PocketRuleApplication
     }
 
 
-    /*
-     * Otherwise activate search.
-     */
-
     this._activateSearch();
   }
 
 
   /* ---------------------------------------------------------- */
-  /*  ACTIVATE SEARCH                                           */
+  /*  SEARCH                                                    */
   /* ---------------------------------------------------------- */
 
   _activateSearch() {
@@ -199,7 +309,11 @@ class PocketRuleApplication
       );
 
 
-    if (!input || !results) {
+    if (
+      !input ||
+      !results
+    ) {
+
       return;
     }
 
@@ -211,23 +325,30 @@ class PocketRuleApplication
 
         results,
 
+        rules:
+          ruleLibrary,
+
         onSelect:
           rule =>
-            this._openRule(rule)
+            this._openRule(
+              rule
+            )
       });
 
 
-    this.searchController.activate();
+    this.searchController
+      .activate();
 
 
     requestAnimationFrame(
-      () => input.focus()
+      () =>
+        input.focus()
     );
   }
 
 
   /* ---------------------------------------------------------- */
-  /*  ACTIVATE RULE VIEWER                                      */
+  /*  VIEWER                                                    */
   /* ---------------------------------------------------------- */
 
   _activateRuleViewer() {
@@ -242,7 +363,8 @@ class PocketRuleApplication
 
       backButton.addEventListener(
         "click",
-        () => this._backToSearch()
+        () =>
+          this._backToSearch()
       );
     }
 
@@ -268,11 +390,17 @@ class PocketRuleApplication
 
 
           const rule =
-            getRuleById(ruleId);
+            getRuleById(
+              ruleId,
+              ruleLibrary
+            );
 
 
           if (rule) {
-            this._openRule(rule);
+
+            this._openRule(
+              rule
+            );
           }
         }
       );
@@ -304,7 +432,7 @@ class PocketRuleApplication
 
 
   /* ---------------------------------------------------------- */
-  /*  BACK TO SEARCH                                            */
+  /*  BACK                                                      */
   /* ---------------------------------------------------------- */
 
   _backToSearch() {
@@ -323,7 +451,7 @@ class PocketRuleApplication
 
 
 /* ------------------------------------------------------------ */
-/*  Application Instance                                        */
+/*  APPLICATION INSTANCE                                        */
 /* ------------------------------------------------------------ */
 
 let pocketRuleApp =
@@ -331,10 +459,24 @@ let pocketRuleApp =
 
 
 /* ------------------------------------------------------------ */
-/*  Open Pocket Rule                                            */
+/*  OPEN POCKET RULE                                            */
 /* ------------------------------------------------------------ */
 
-function openPocketRule() {
+async function openPocketRule() {
+
+  try {
+
+    await loadRuleLibrary();
+
+  } catch (error) {
+
+    ui.notifications.error(
+      "Pocket Rule could not load its rules database."
+    );
+
+    return;
+  }
+
 
   if (!pocketRuleApp) {
 
@@ -343,9 +485,12 @@ function openPocketRule() {
   }
 
 
-  if (pocketRuleApp.rendered) {
+  if (
+    pocketRuleApp.rendered
+  ) {
 
-    pocketRuleApp.bringToFront();
+    pocketRuleApp
+      .bringToFront();
 
     return;
   }
@@ -358,7 +503,7 @@ function openPocketRule() {
 
 
 /* ------------------------------------------------------------ */
-/*  Module Initialization                                       */
+/*  MODULE INITIALIZATION                                       */
 /* ------------------------------------------------------------ */
 
 Hooks.once(
@@ -379,7 +524,12 @@ Hooks.once(
     if (module) {
 
       module.api = {
-        open: openPocketRule
+
+        open:
+          openPocketRule,
+
+        getRules:
+          () => ruleLibrary
       };
     }
   }
@@ -387,7 +537,28 @@ Hooks.once(
 
 
 /* ------------------------------------------------------------ */
-/*  Scene Controls                                              */
+/*  PRELOAD DATABASE                                            */
+/* ------------------------------------------------------------ */
+
+Hooks.once(
+  "ready",
+  () => {
+
+    loadRuleLibrary()
+      .catch(() => {
+
+        /*
+         * The error has already been logged.
+         * Pocket Rule will try again when opened.
+         */
+
+      });
+  }
+);
+
+
+/* ------------------------------------------------------------ */
+/*  SCENE CONTROLS                                              */
 /* ------------------------------------------------------------ */
 
 Hooks.on(
@@ -419,7 +590,8 @@ Hooks.on(
             return;
           }
 
-          openPocketRule();
+
+          void openPocketRule();
         }
     };
   }
