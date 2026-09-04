@@ -343,7 +343,295 @@
 
   border-radius: 6px;
 }
+/* ============================================================ */
+/*  RULE VIEWER                                                 */
+/* ============================================================ */
 
+
+.pocket-rule-viewer-toolbar {
+  min-height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 6px 10px;
+
+  box-sizing: border-box;
+
+  background: var(--pr-panel);
+
+  border-bottom:
+    1px solid var(--pr-border);
+}
+
+
+.pocket-rule-back {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  width: auto;
+  min-height: 27px;
+
+  margin: 0;
+  padding: 4px 8px;
+
+  background:
+    var(--pr-panel-light);
+
+  border:
+    1px solid var(--pr-border);
+
+  border-radius: 4px;
+
+  color:
+    var(--pr-text);
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+
+.pocket-rule-back:hover {
+  background:
+    var(--pr-panel-hover);
+
+  border-color:
+    var(--pr-border-light);
+}
+
+
+.pocket-rule-view-source {
+  color:
+    var(--pr-dim);
+
+  font-size: 10px;
+}
+
+
+.pocket-rule-rule-scroll {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 14px;
+
+  box-sizing: border-box;
+}
+
+
+/* ------------------------------------------------------------ */
+/*  RULE HEADER                                                 */
+/* ------------------------------------------------------------ */
+
+
+.pocket-rule-rule-header {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding-bottom: 11px;
+
+  border-bottom:
+    1px solid var(--pr-border);
+}
+
+
+.pocket-rule-rule-icon {
+  width: 34px;
+  height: 34px;
+
+  flex: 0 0 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    var(--pr-panel-light);
+
+  border:
+    1px solid var(--pr-border);
+
+  border-radius: 5px;
+
+  color:
+    var(--pr-text);
+
+  font-size: 17px;
+}
+
+
+.pocket-rule-rule-heading {
+  min-width: 0;
+}
+
+
+.pocket-rule-rule-title {
+  color:
+    var(--pr-text);
+
+  font-size: 18px;
+  font-weight: 600;
+
+  line-height: 1.2;
+}
+
+
+.pocket-rule-rule-category {
+  margin-top: 3px;
+
+  color:
+    var(--pr-muted);
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.6px;
+}
+
+
+/* ------------------------------------------------------------ */
+/*  RULE BODY                                                   */
+/* ------------------------------------------------------------ */
+
+
+.pocket-rule-rule-body {
+  padding:
+    11px 2px 4px 2px;
+
+  color:
+    var(--pr-text);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+.pocket-rule-rule-body p {
+  margin:
+    0 0 9px 0;
+}
+
+
+.pocket-rule-rule-body p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ------------------------------------------------------------ */
+/*  RELATED RULES                                               */
+/* ------------------------------------------------------------ */
+
+
+.pocket-rule-related {
+  margin-top: 14px;
+
+  padding-top: 10px;
+
+  border-top:
+    1px solid var(--pr-border);
+}
+
+
+.pocket-rule-related-title {
+  margin-bottom: 7px;
+
+  color:
+    var(--pr-muted);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.6px;
+}
+
+
+.pocket-rule-related-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+
+.pocket-rule-related-rule {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  width: auto;
+
+  margin: 0;
+  padding: 5px 8px;
+
+  background:
+    var(--pr-panel-light);
+
+  border:
+    1px solid var(--pr-border);
+
+  border-radius: 4px;
+
+  color:
+    var(--pr-text);
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+
+.pocket-rule-related-rule:hover {
+  background:
+    var(--pr-panel-hover);
+
+  border-color:
+    var(--pr-border-light);
+}
+
+
+/* ------------------------------------------------------------ */
+/*  VIEWER SCROLLBAR                                            */
+/* ------------------------------------------------------------ */
+
+
+.pocket-rule-rule-scroll {
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    var(--pr-border-light)
+    transparent;
+}
+
+
+.pocket-rule-rule-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+.pocket-rule-rule-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.pocket-rule-rule-scroll::-webkit-scrollbar-thumb {
+  background:
+    var(--pr-border);
+
+  border-radius: 6px;
+}
 
 .pocket-rule-results::-webkit-scrollbar-thumb:hover {
   background: var(--pr-border-light);
