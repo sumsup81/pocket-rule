@@ -6,31 +6,974 @@
     "icon": "fa-solid fa-dice-d20",
     "aliases": [
       "skill check",
+      "check",
       "ability checks",
-      "skill checks",
-      "check"
+      "skill checks"
     ],
     "keywords": [
       "d20",
       "ability",
       "skill",
+      "proficiency",
+      "dc"
+    ],
+    "preview": "A D20 Test using an ability, sometimes with an associated skill, to overcome a challenge.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Roll a d20, add the relevant ability modifier, and add your Proficiency Bonus if an applicable proficiency allows it."
+      }
+    ],
+    "related": [
+      "d20-test",
+      "difficulty-class",
+      "proficiency",
+      "skill"
+    ]
+  },
+  {
+    "id": "ability-score-and-modifier",
+    "name": "Ability Score and Modifier",
+    "category": "Core",
+    "icon": "fa-solid fa-chart-simple",
+    "aliases": [
+      "ability modifier",
+      "stat modifier",
+      "ability score"
+    ],
+    "keywords": [
       "strength",
       "dexterity",
       "constitution",
       "intelligence",
       "wisdom",
-      "charisma",
-      "challenge"
+      "charisma"
     ],
-    "preview": "A D20 Test made with an ability, sometimes using an associated skill, to overcome a challenge.",
-    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "preview": "Each of the six abilities has a score and a modifier used by many rules.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
     "text": [
       {
-        "heading": "Ability Check",
-        "body": "An Ability Check is a D20 Test that represents using one of the six abilities, sometimes together with a specific skill, to overcome a challenge."
+        "heading": null,
+        "body": "Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma each have a score and a corresponding modifier. Add the modifier whenever a rule tells you to use that ability."
+      }
+    ],
+    "related": [
+      "ability-check",
+      "saving-throw"
+    ]
+  },
+  {
+    "id": "action",
+    "name": "Action",
+    "category": "Action",
+    "icon": "fa-solid fa-circle-play",
+    "aliases": [
+      "actions",
+      "main action"
+    ],
+    "keywords": [
+      "turn",
+      "combat",
+      "action economy"
+    ],
+    "preview": "On your turn, you normally have one action.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "On your turn, you can take one action, choosing a standard action or another action granted by a feature or rule."
+      }
+    ],
+    "related": [
+      "attack",
+      "dash",
+      "disengage",
+      "dodge",
+      "help",
+      "hide",
+      "influence",
+      "magic",
+      "ready",
+      "search",
+      "study",
+      "utilize"
+    ]
+  },
+  {
+    "id": "advantage",
+    "name": "Advantage",
+    "category": "D20 Test",
+    "icon": "fa-solid fa-arrow-up",
+    "aliases": [
+      "adv",
+      "advantage roll"
+    ],
+    "keywords": [
+      "d20",
+      "two dice",
+      "higher"
+    ],
+    "preview": "Roll two d20s and use the higher result.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Advantage causes you to roll two d20s for a D20 Test and use the higher roll. Multiple sources of Advantage do not stack. Advantage and Disadvantage on the same roll cancel each other."
+      }
+    ],
+    "related": [
+      "disadvantage",
+      "d20-test"
+    ]
+  },
+  {
+    "id": "adventure",
+    "name": "Adventure",
+    "category": "Core",
+    "icon": "fa-solid fa-map",
+    "aliases": [
+      "adventures"
+    ],
+    "keywords": [
+      "encounter",
+      "campaign"
+    ],
+    "preview": "An adventure is a series of encounters that produces a story through play.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Adventure is the rules term for a connected series of encounters."
+      }
+    ],
+    "related": [
+      "encounter",
+      "campaign"
+    ]
+  },
+  {
+    "id": "alignment",
+    "name": "Alignment",
+    "category": "Core",
+    "icon": "fa-solid fa-scale-balanced",
+    "aliases": [
+      "lawful good",
+      "chaotic neutral",
+      "alignment rules"
+    ],
+    "keywords": [
+      "good",
+      "evil",
+      "lawful",
+      "chaotic",
+      "neutral"
+    ],
+    "preview": "Alignment broadly describes ethical attitudes and ideals.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Alignment combines a morality axis (Good, Evil, Neutral) with an order axis (Lawful, Chaotic, Neutral) to create the familiar nine alignments."
       }
     ],
     "related": []
+  },
+  {
+    "id": "ally",
+    "name": "Ally",
+    "category": "Core",
+    "icon": "fa-solid fa-user-group",
+    "aliases": [
+      "allies",
+      "friendly creature"
+    ],
+    "keywords": [
+      "party",
+      "friend"
+    ],
+    "preview": "An ally is a creature on your side or designated as your ally.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Party members, friends, creatures fighting on your side, and creatures designated as allies by a rule or the DM count as allies."
+      }
+    ],
+    "related": [
+      "enemy"
+    ]
+  },
+  {
+    "id": "ammunition",
+    "name": "Ammunition",
+    "category": "Weapon Property",
+    "icon": "fa-solid fa-bullseye",
+    "aliases": [
+      "ammunition property",
+      "ammo",
+      "arrow",
+      "bolt",
+      "bullet"
+    ],
+    "keywords": [
+      "free hand",
+      "recover half",
+      "round down"
+    ],
+    "preview": "A weapon with Ammunition needs the specified ammunition for ranged attacks.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Each attack expends one piece of ammunition. Drawing ammunition is part of the attack; loading a one-handed weapon requires a free hand. After a fight, 1 minute of searching recovers half the ammunition used, rounded down."
+      }
+    ],
+    "related": [
+      "round-down",
+      "weapon-range"
+    ]
+  },
+  {
+    "id": "area-of-effect",
+    "name": "Area of Effect",
+    "category": "Magic",
+    "icon": "fa-solid fa-expand",
+    "aliases": [
+      "aoe",
+      "area effect"
+    ],
+    "keywords": [
+      "cone",
+      "cube",
+      "cylinder",
+      "emanation",
+      "line",
+      "sphere",
+      "total cover"
+    ],
+    "preview": "Many spells and effects fill a shaped area rather than targeting only one creature.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Common areas are Cone, Cube, Cylinder, Emanation, Line, and Sphere. Total Cover can block straight lines from an area's point of origin and exclude locations behind it."
+      }
+    ],
+    "related": [
+      "cone",
+      "cube",
+      "cylinder",
+      "emanation",
+      "line",
+      "sphere",
+      "cover"
+    ]
+  },
+  {
+    "id": "armor-class",
+    "name": "Armor Class",
+    "category": "Combat",
+    "icon": "fa-solid fa-shield-halved",
+    "aliases": [
+      "ac",
+      "armor class"
+    ],
+    "keywords": [
+      "attack",
+      "defense",
+      "dexterity"
+    ],
+    "preview": "The target number an attack roll must meet or exceed to hit.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Base AC",
+        "body": "A creature's basic AC is 10 + Dexterity modifier unless armor or another rule gives a different base calculation."
+      },
+      {
+        "heading": "One Base Calculation",
+        "body": "If more than one rule gives you a base AC calculation, choose which one to use; you do not combine base calculations."
+      }
+    ],
+    "related": [
+      "attack-roll",
+      "cover",
+      "armor-training"
+    ]
+  },
+  {
+    "id": "armor-stealth-disadvantage",
+    "name": "Armor Stealth Disadvantage",
+    "category": "Equipment",
+    "icon": "fa-solid fa-eye-slash",
+    "aliases": [
+      "stealth disadvantage armor",
+      "noisy armor"
+    ],
+    "keywords": [
+      "stealth",
+      "disadvantage"
+    ],
+    "preview": "Some armor imposes Disadvantage on Dexterity (Stealth) checks.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If an armor entry lists Disadvantage for Stealth, you have Disadvantage on Dexterity (Stealth) checks while wearing it."
+      }
+    ],
+    "related": [
+      "disadvantage"
+    ]
+  },
+  {
+    "id": "armor-strength-requirement",
+    "name": "Armor Strength Requirement",
+    "category": "Equipment",
+    "icon": "fa-solid fa-dumbbell",
+    "aliases": [
+      "armor strength",
+      "heavy armor strength",
+      "plate strength",
+      "chain mail strength"
+    ],
+    "keywords": [
+      "speed -10",
+      "strength"
+    ],
+    "preview": "Some armor reduces Speed if your Strength is below its listed requirement.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If armor lists a Strength score and your Strength is lower, your Speed is reduced by 10 feet while wearing it."
+      }
+    ],
+    "related": [
+      "speed",
+      "armor-training"
+    ]
+  },
+  {
+    "id": "armor-training",
+    "name": "Armor Training",
+    "category": "Equipment",
+    "icon": "fa-solid fa-shield",
+    "aliases": [
+      "armor proficiency",
+      "shield proficiency",
+      "untrained armor"
+    ],
+    "keywords": [
+      "disadvantage",
+      "spellcasting",
+      "strength",
+      "dexterity",
+      "shield"
+    ],
+    "preview": "Wearing armor without training has serious drawbacks.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If you wear Light, Medium, or Heavy armor without training, you have Disadvantage on D20 Tests involving Strength or Dexterity and cannot cast spells. A Shield gives no AC bonus if you lack Shield training."
+      }
+    ],
+    "related": [
+      "armor-class",
+      "disadvantage"
+    ]
+  },
+  {
+    "id": "attack",
+    "name": "Attack",
+    "category": "Action",
+    "icon": "fa-solid fa-swords",
+    "aliases": [
+      "attack action",
+      "attacking"
+    ],
+    "keywords": [
+      "weapon",
+      "unarmed",
+      "extra attack",
+      "draw weapon"
+    ],
+    "preview": "Use the Attack action to make an attack with a weapon or an Unarmed Strike.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Attack",
+        "body": "The Attack action lets you make one attack roll with a weapon or an Unarmed Strike, unless a feature gives you more attacks."
+      },
+      {
+        "heading": "Equip or Unequip",
+        "body": "When you make an attack as part of the action, you can equip or unequip one weapon before or after that attack."
+      },
+      {
+        "heading": "Move Between Attacks",
+        "body": "If you can make multiple attacks, you can use movement between them."
+      }
+    ],
+    "related": [
+      "attack-roll",
+      "unarmed-strike",
+      "weapon-attack"
+    ]
+  },
+  {
+    "id": "attack-roll",
+    "name": "Attack Roll",
+    "category": "D20 Test",
+    "icon": "fa-solid fa-crosshairs",
+    "aliases": [
+      "attack rolls",
+      "to hit",
+      "hit roll"
+    ],
+    "keywords": [
+      "d20",
+      "armor class",
+      "weapon",
+      "spell",
+      "unarmed"
+    ],
+    "preview": "A D20 Test used to determine whether an attack hits.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "An attack roll is a D20 Test made for a weapon attack, Unarmed Strike, spell attack, or another effect that calls for one. Compare the total to the target's Armor Class."
+      }
+    ],
+    "related": [
+      "armor-class",
+      "critical-hit",
+      "advantage",
+      "disadvantage"
+    ]
+  },
+  {
+    "id": "attitude",
+    "name": "Attitude",
+    "category": "Social",
+    "icon": "fa-solid fa-people-arrows",
+    "aliases": [
+      "npc attitude",
+      "monster attitude"
+    ],
+    "keywords": [
+      "friendly",
+      "hostile",
+      "indifferent"
+    ],
+    "preview": "A monster's attitude toward you is Friendly, Hostile, or Indifferent.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Attitude summarizes a monster's starting disposition toward a player character and can affect Influence checks."
+      }
+    ],
+    "related": [
+      "friendly",
+      "hostile",
+      "indifferent",
+      "influence"
+    ]
+  },
+  {
+    "id": "attunement",
+    "name": "Attunement",
+    "category": "Equipment",
+    "icon": "fa-solid fa-ring",
+    "aliases": [
+      "attune",
+      "magic item attunement",
+      "attuned"
+    ],
+    "keywords": [
+      "magic item",
+      "three items"
+    ],
+    "preview": "Some magic items require Attunement before their magical properties can be used.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A creature can normally be attuned to no more than three magic items at one time. Individual items can set prerequisites or special rules."
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "blinded",
+    "name": "Blinded",
+    "category": "Condition",
+    "icon": "fa-solid fa-eye-slash",
+    "aliases": [
+      "blind",
+      "blinded condition"
+    ],
+    "keywords": [
+      "sight",
+      "advantage",
+      "disadvantage"
+    ],
+    "preview": "You cannot see; sight-based checks fail and attacks are affected.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Can't See",
+        "body": "You cannot see and automatically fail ability checks that require sight."
+      },
+      {
+        "heading": "Attacks",
+        "body": "Attack rolls against you have Advantage, and your attack rolls have Disadvantage."
+      }
+    ],
+    "related": [
+      "advantage",
+      "disadvantage"
+    ]
+  },
+  {
+    "id": "blindsight",
+    "name": "Blindsight",
+    "category": "Vision",
+    "icon": "fa-solid fa-eye-low-vision",
+    "aliases": [
+      "blind sight"
+    ],
+    "keywords": [
+      "invisible",
+      "darkness",
+      "blinded",
+      "total cover"
+    ],
+    "preview": "Blindsight lets you see within a stated range without relying on normal sight.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Within its range, Blindsight can perceive anything not behind Total Cover even if you are Blinded or in Darkness, and it can perceive Invisible creatures and objects."
+      }
+    ],
+    "related": [
+      "invisible",
+      "cover",
+      "blinded"
+    ]
+  },
+  {
+    "id": "bloodied",
+    "name": "Bloodied",
+    "category": "Core",
+    "icon": "fa-solid fa-droplet",
+    "aliases": [
+      "bloodied condition",
+      "half hp"
+    ],
+    "keywords": [
+      "half hit points"
+    ],
+    "preview": "A creature is Bloodied while it has half its Hit Points or fewer remaining.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Bloodied is a descriptive rules state that applies when a creature has no more than half of its Hit Point maximum remaining."
+      }
+    ],
+    "related": [
+      "hit-points"
+    ]
+  },
+  {
+    "id": "bonus-action",
+    "name": "Bonus Action",
+    "category": "Action",
+    "icon": "fa-solid fa-forward-fast",
+    "aliases": [
+      "bonus action",
+      "ba"
+    ],
+    "keywords": [
+      "action economy",
+      "turn"
+    ],
+    "preview": "A special additional action available only when a rule gives you one.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "You can take no more than one Bonus Action on a turn, and you have a Bonus Action only when a rule, feature, spell, or item gives you something to do with it."
+      }
+    ],
+    "related": [
+      "action",
+      "reaction"
+    ]
+  },
+  {
+    "id": "breaking-objects",
+    "name": "Breaking Objects",
+    "category": "Core",
+    "icon": "fa-solid fa-hammer",
+    "aliases": [
+      "break object",
+      "object ac",
+      "object hp"
+    ],
+    "keywords": [
+      "armor class",
+      "hit points",
+      "attack",
+      "utilize"
+    ],
+    "preview": "Objects can be attacked and damaged; the DM can let fragile objects break automatically.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Objects can have Armor Class and Hit Points. A sufficiently fragile object may be broken automatically with the Attack or Utilize action at the DM's discretion."
+      }
+    ],
+    "related": [
+      "object",
+      "damage-threshold"
+    ]
+  },
+  {
+    "id": "bright-light",
+    "name": "Bright Light",
+    "category": "Vision",
+    "icon": "fa-solid fa-sun",
+    "aliases": [
+      "brightly lit",
+      "bright light"
+    ],
+    "keywords": [
+      "vision",
+      "light"
+    ],
+    "preview": "Bright Light is normal illumination.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Bright Light is ordinary illumination and does not impose the visibility penalties associated with Dim Light or Darkness."
+      }
+    ],
+    "related": [
+      "dim-light",
+      "darkness"
+    ]
+  },
+  {
+    "id": "burning",
+    "name": "Burning",
+    "category": "Hazard",
+    "icon": "fa-solid fa-fire",
+    "aliases": [
+      "on fire",
+      "burning hazard",
+      "catch fire"
+    ],
+    "keywords": [
+      "1d4",
+      "fire",
+      "prone",
+      "extinguish"
+    ],
+    "preview": "A burning creature or object takes Fire damage each turn until the flames are extinguished.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A burning creature or object takes 1d4 Fire damage at the start of each of its turns. A creature can use an action to fall Prone and roll to extinguish itself; dousing, submerging, or suffocating the fire also ends it."
+      }
+    ],
+    "related": [
+      "prone"
+    ]
+  },
+  {
+    "id": "burrow-speed",
+    "name": "Burrow Speed",
+    "category": "Movement",
+    "icon": "fa-solid fa-person-digging",
+    "aliases": [
+      "burrowing",
+      "burrow"
+    ],
+    "keywords": [
+      "speed",
+      "earth",
+      "sand",
+      "mud",
+      "ice"
+    ],
+    "preview": "A Burrow Speed lets a creature move through certain loose materials.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A Burrow Speed can normally move through sand, earth, mud, or ice, but not solid rock unless another rule specifically permits it."
+      }
+    ],
+    "related": [
+      "speed"
+    ]
+  },
+  {
+    "id": "campaign",
+    "name": "Campaign",
+    "category": "Core",
+    "icon": "fa-solid fa-book-atlas",
+    "aliases": [
+      "campaigns"
+    ],
+    "keywords": [
+      "adventure"
+    ],
+    "preview": "A campaign is a series of adventures.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Campaign is the rules term for an ongoing sequence of adventures."
+      }
+    ],
+    "related": [
+      "adventure"
+    ]
+  },
+  {
+    "id": "cantrip",
+    "name": "Cantrip",
+    "category": "Magic",
+    "icon": "fa-solid fa-wand-magic",
+    "aliases": [
+      "level 0 spell",
+      "cantrips"
+    ],
+    "keywords": [
+      "spell slot",
+      "level 0"
+    ],
+    "preview": "A cantrip is a level 0 spell cast without a spell slot.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Cantrips are level 0 spells and do not require spell slots unless another rule specifically says otherwise."
+      }
+    ],
+    "related": [
+      "spell",
+      "spell-slots"
+    ]
+  },
+  {
+    "id": "carrying-capacity",
+    "name": "Carrying Capacity",
+    "category": "Movement",
+    "icon": "fa-solid fa-weight-hanging",
+    "aliases": [
+      "encumbrance",
+      "carry weight",
+      "push pull lift",
+      "drag weight"
+    ],
+    "keywords": [
+      "strength",
+      "weight",
+      "size"
+    ],
+    "preview": "How much you can carry, drag, lift, or push depends on Strength and size.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Small or Medium",
+        "body": "Carry up to Strength × 15 lb.; drag, lift, or push up to Strength × 30 lb."
+      },
+      {
+        "heading": "Size Scaling",
+        "body": "Tiny uses half those multipliers; Large doubles them; Huge quadruples them; Gargantuan multiplies them by eight."
+      },
+      {
+        "heading": "Over Carry Capacity",
+        "body": "While dragging, lifting, or pushing more than your carrying maximum, your Speed can be no more than 5 feet."
+      }
+    ],
+    "related": [
+      "size",
+      "speed"
+    ]
+  },
+  {
+    "id": "challenge-rating",
+    "name": "Challenge Rating",
+    "category": "Core",
+    "icon": "fa-solid fa-skull",
+    "aliases": [
+      "cr",
+      "challenge rating"
+    ],
+    "keywords": [
+      "monster",
+      "difficulty"
+    ],
+    "preview": "Challenge Rating summarizes how threatening a monster is to a typical party.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "CR is a rough measure of a monster's threat to a group of four player characters; circumstances and party size can make a creature more or less dangerous than the number suggests."
+      }
+    ],
+    "related": [
+      "monster"
+    ]
+  },
+  {
+    "id": "character-sheet",
+    "name": "Character Sheet",
+    "category": "Core",
+    "icon": "fa-solid fa-file-lines",
+    "aliases": [
+      "character sheet",
+      "sheet"
+    ],
+    "keywords": [
+      "character",
+      "record",
+      "stats",
+      "abilities",
+      "equipment"
+    ],
+    "preview": "The paper or digital record used to track a character's game information.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A character sheet is the paper or digital record used to track a character's abilities, features, equipment, Hit Points, and other game information."
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "charmed",
+    "name": "Charmed",
+    "category": "Condition",
+    "icon": "fa-solid fa-heart",
+    "aliases": [
+      "charm",
+      "charmed condition"
+    ],
+    "keywords": [
+      "charmer",
+      "social",
+      "advantage"
+    ],
+    "preview": "You cannot harm the charmer, and the charmer has an edge socially.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Can't Harm the Charmer",
+        "body": "You cannot attack the charmer or target the charmer with damaging abilities or magical effects."
+      },
+      {
+        "heading": "Social Advantage",
+        "body": "The charmer has Advantage on ability checks to interact with you socially."
+      }
+    ],
+    "related": [
+      "advantage"
+    ]
+  },
+  {
+    "id": "climb-speed",
+    "name": "Climb Speed",
+    "category": "Movement",
+    "icon": "fa-solid fa-up-long",
+    "aliases": [
+      "climbing speed"
+    ],
+    "keywords": [
+      "speed",
+      "climb"
+    ],
+    "preview": "A Climb Speed avoids the normal extra movement cost of climbing.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Use a Climb Speed to traverse vertical surfaces without the extra movement cost normally imposed by climbing."
+      }
+    ],
+    "related": [
+      "climbing",
+      "speed"
+    ]
+  },
+  {
+    "id": "climbing",
+    "name": "Climbing",
+    "category": "Movement",
+    "icon": "fa-solid fa-person-hiking",
+    "aliases": [
+      "climb",
+      "climbing rules",
+      "wall climbing"
+    ],
+    "keywords": [
+      "movement",
+      "athletics",
+      "dc 15"
+    ],
+    "preview": "Climbing normally costs extra movement unless you use a Climb Speed.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Each foot climbed costs 1 extra foot, or 2 extra feet in Difficult Terrain. A slippery surface or one with few handholds may require a DC 15 Strength (Athletics) check at the DM's option."
+      }
+    ],
+    "related": [
+      "climb-speed",
+      "difficult-terrain",
+      "speed"
+    ]
+  },
+  {
+    "id": "combining-spell-effects",
+    "name": "Combining Spell Effects",
+    "category": "Magic",
+    "icon": "fa-solid fa-layer-group",
+    "aliases": [
+      "same spell stacking",
+      "spell stacking",
+      "combine spells"
+    ],
+    "keywords": [
+      "overlap",
+      "same spell",
+      "most potent"
+    ],
+    "preview": "Different spells can overlap; multiple copies of the same spell do not stack.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Effects from different spells can combine while their durations overlap. Multiple castings of the same spell do not combine; use the most potent effect, or the most recent if equally potent."
+      }
+    ],
+    "related": [
+      "spell"
+    ]
   },
   {
     "id": "concentration",
@@ -39,40 +982,102 @@
     "icon": "fa-solid fa-brain",
     "aliases": [
       "concentrating",
-      "spell concentration",
       "concentration check",
       "concentration save"
     ],
     "keywords": [
-      "spell",
-      "magic",
       "constitution",
-      "saving throw",
       "damage",
-      "incapacitated",
-      "duration"
+      "dc 10",
+      "incapacitated"
     ],
-    "preview": "Some spells and effects require Concentration to stay active and end if Concentration is broken.",
-    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "preview": "Some spells and effects require Concentration to remain active.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
     "text": [
       {
-        "heading": "Maintaining Concentration",
-        "body": "Some spells and other effects require Concentration to remain active. You may end your Concentration voluntarily at any time without using an action."
-      },
-      {
-        "heading": "Another Concentration Effect",
+        "heading": "One Concentration Effect",
         "body": "Starting another spell or effect that requires Concentration immediately ends the Concentration you were already maintaining."
       },
       {
-        "heading": "Taking Damage",
-        "body": "When you take damage while concentrating, make a Constitution saving throw. The DC is 10 or half the damage taken, rounded down, whichever is higher. The DC cannot exceed 30."
+        "heading": "Damage",
+        "body": "When you take damage, make a Constitution saving throw. The DC is 10 or half the damage taken, rounded down, whichever is higher, to a maximum DC of 30."
       },
       {
         "heading": "Incapacitated or Dead",
-        "body": "Your Concentration ends if you gain the Incapacitated condition or die."
+        "body": "Concentration ends if you become Incapacitated or die."
+      },
+      {
+        "heading": "Voluntary End",
+        "body": "You can end your Concentration at any time without using an action."
       }
     ],
-    "related": []
+    "related": [
+      "incapacitated",
+      "round-down"
+    ]
+  },
+  {
+    "id": "condition",
+    "name": "Condition",
+    "category": "Condition",
+    "icon": "fa-solid fa-circle-exclamation",
+    "aliases": [
+      "conditions",
+      "status effect"
+    ],
+    "keywords": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "grappled",
+      "incapacitated",
+      "invisible",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained",
+      "stunned",
+      "unconscious"
+    ],
+    "preview": "A condition is a temporary game state with defined effects.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Conditions do not stack with themselves; you either have a condition or you do not. Exhaustion is the exception because it has cumulative levels."
+      }
+    ],
+    "related": [
+      "exhaustion"
+    ]
+  },
+  {
+    "id": "cone",
+    "name": "Cone",
+    "category": "Area of Effect",
+    "icon": "fa-solid fa-play",
+    "aliases": [
+      "cone aoe",
+      "cone area"
+    ],
+    "keywords": [
+      "area of effect",
+      "origin"
+    ],
+    "preview": "A Cone widens as it extends from its point of origin.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A Cone extends in a chosen direction. At any distance from the origin, its width equals that distance. The origin is excluded unless the creator chooses to include it."
+      }
+    ],
+    "related": [
+      "area-of-effect"
+    ]
   },
   {
     "id": "cover",
@@ -87,32 +1092,1077 @@
       "total cover"
     ],
     "keywords": [
-      "armor class",
       "ac",
-      "dexterity",
-      "saving throw",
-      "obstacle",
-      "protection",
-      "target"
+      "dexterity save",
+      "obstacle"
     ],
-    "preview": "Cover protects a target behind an obstacle, with stronger benefits for greater degrees of cover.",
-    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "preview": "Cover protects a target behind an obstacle.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
     "text": [
       {
         "heading": "Half Cover",
-        "body": "A target with Half Cover gains a +2 bonus to Armor Class and Dexterity saving throws."
+        "body": "+2 AC and +2 to Dexterity saving throws."
       },
       {
         "heading": "Three-Quarters Cover",
-        "body": "A target with Three-Quarters Cover gains a +5 bonus to Armor Class and Dexterity saving throws."
+        "body": "+5 AC and +5 to Dexterity saving throws."
       },
       {
         "heading": "Total Cover",
-        "body": "A target with Total Cover cannot be targeted directly."
+        "body": "The target cannot be targeted directly."
       }
     ],
     "related": [
-      "hide"
+      "hide",
+      "armor-class"
+    ]
+  },
+  {
+    "id": "crawling",
+    "name": "Crawling",
+    "category": "Movement",
+    "icon": "fa-solid fa-person-crawling",
+    "aliases": [
+      "crawl",
+      "crawl speed"
+    ],
+    "keywords": [
+      "movement",
+      "prone",
+      "difficult terrain"
+    ],
+    "preview": "Crawling normally costs 1 extra foot per foot moved.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Each foot crawled costs 1 extra foot, or 2 extra feet if the space is also Difficult Terrain."
+      }
+    ],
+    "related": [
+      "prone",
+      "difficult-terrain",
+      "speed"
+    ]
+  },
+  {
+    "id": "creature",
+    "name": "Creature",
+    "category": "Core",
+    "icon": "fa-solid fa-dragon",
+    "aliases": [
+      "creatures"
+    ],
+    "keywords": [
+      "player character",
+      "monster"
+    ],
+    "preview": "Any being in the game, including player characters, is a creature.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Creature is the general rules term for beings in the game, including player characters and monsters."
+      }
+    ],
+    "related": [
+      "creature-type"
+    ]
+  },
+  {
+    "id": "creature-type",
+    "name": "Creature Type",
+    "category": "Core",
+    "icon": "fa-solid fa-tags",
+    "aliases": [
+      "type",
+      "creature types"
+    ],
+    "keywords": [
+      "beast",
+      "humanoid",
+      "undead",
+      "fey",
+      "fiend",
+      "dragon"
+    ],
+    "preview": "Every creature has a creature type used by rules that care about categories.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "The standard creature types are Aberration, Beast, Celestial, Construct, Dragon, Elemental, Fey, Fiend, Giant, Humanoid, Monstrosity, Ooze, Plant, and Undead."
+      }
+    ],
+    "related": [
+      "creature"
+    ]
+  },
+  {
+    "id": "critical-hit",
+    "name": "Critical Hit",
+    "category": "Combat",
+    "icon": "fa-solid fa-burst",
+    "aliases": [
+      "critical",
+      "crit",
+      "nat 20",
+      "natural 20"
+    ],
+    "keywords": [
+      "attack",
+      "damage dice",
+      "20"
+    ],
+    "preview": "A natural 20 on an attack roll is a Critical Hit.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "When the d20 for an attack roll is a 20, the attack hits regardless of modifiers or AC. Roll all of the attack's damage dice twice, add them together, then add modifiers once."
+      }
+    ],
+    "related": [
+      "attack-roll",
+      "damage-roll"
+    ]
+  },
+  {
+    "id": "cube",
+    "name": "Cube",
+    "category": "Area of Effect",
+    "icon": "fa-solid fa-cube",
+    "aliases": [
+      "cube aoe",
+      "cube area"
+    ],
+    "keywords": [
+      "area of effect",
+      "origin"
+    ],
+    "preview": "A Cube fills a cubic area extending from a point on one of its faces.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A Cube's origin can be anywhere on one face. The origin is excluded unless the creator chooses to include it."
+      }
+    ],
+    "related": [
+      "area-of-effect"
+    ]
+  },
+  {
+    "id": "curses",
+    "name": "Curses",
+    "category": "Magic",
+    "icon": "fa-solid fa-skull-crossbones",
+    "aliases": [
+      "curse",
+      "cursed"
+    ],
+    "keywords": [
+      "remove curse"
+    ],
+    "preview": "A curse's creating effect defines what the curse does and how it ends.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Curses can be ended by magic that specifically removes curses, such as effects modeled on Remove Curse or Greater Restoration."
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "cylinder",
+    "name": "Cylinder",
+    "category": "Area of Effect",
+    "icon": "fa-solid fa-database",
+    "aliases": [
+      "cylinder aoe",
+      "cylinder area"
+    ],
+    "keywords": [
+      "area of effect",
+      "origin",
+      "radius",
+      "height"
+    ],
+    "preview": "A Cylinder has a radius and height around an origin at the center of its top or bottom.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A Cylinder's origin is at the center of its circular top or bottom and is included in the area."
+      }
+    ],
+    "related": [
+      "area-of-effect"
+    ]
+  },
+  {
+    "id": "d20-test",
+    "name": "D20 Test",
+    "category": "D20 Test",
+    "icon": "fa-solid fa-dice-d20",
+    "aliases": [
+      "d20 tests",
+      "d20 roll"
+    ],
+    "keywords": [
+      "ability check",
+      "attack roll",
+      "saving throw",
+      "advantage",
+      "disadvantage"
+    ],
+    "preview": "The umbrella term for ability checks, attack rolls, and saving throws.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Ability checks, attack rolls, and saving throws are all D20 Tests. A rule that modifies D20 Tests applies to all three unless it says otherwise."
+      }
+    ],
+    "related": [
+      "ability-check",
+      "attack-roll",
+      "saving-throw",
+      "advantage",
+      "disadvantage"
+    ]
+  },
+  {
+    "id": "damage",
+    "name": "Damage",
+    "category": "Damage",
+    "icon": "fa-solid fa-heart-crack",
+    "aliases": [
+      "take damage",
+      "damage rules"
+    ],
+    "keywords": [
+      "hit points",
+      "healing"
+    ],
+    "preview": "Damage reduces Hit Points.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Damage represents harm to a creature or object and reduces its Hit Points unless another rule changes or prevents that damage."
+      }
+    ],
+    "related": [
+      "hit-points",
+      "damage-types",
+      "resistance",
+      "vulnerability",
+      "immunity"
+    ]
+  },
+  {
+    "id": "damage-roll",
+    "name": "Damage Roll",
+    "category": "Damage",
+    "icon": "fa-solid fa-dice",
+    "aliases": [
+      "damage dice",
+      "roll damage"
+    ],
+    "keywords": [
+      "damage",
+      "dice",
+      "modifier"
+    ],
+    "preview": "A die roll, modified as appropriate, that determines damage dealt.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A damage roll is a die roll plus any applicable modifiers that determines how much damage an effect deals."
+      }
+    ],
+    "related": [
+      "damage",
+      "critical-hit"
+    ]
+  },
+  {
+    "id": "damage-threshold",
+    "name": "Damage Threshold",
+    "category": "Damage",
+    "icon": "fa-solid fa-gauge-high",
+    "aliases": [
+      "dt",
+      "damage threshold"
+    ],
+    "keywords": [
+      "object",
+      "minimum damage"
+    ],
+    "preview": "Damage below a threshold is ignored; damage that reaches it applies in full.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If a creature or object has a Damage Threshold, a single attack or effect must deal at least that amount of damage to affect its Hit Points. If the threshold is met, apply the entire damage instance."
+      }
+    ],
+    "related": [
+      "damage",
+      "breaking-objects"
+    ]
+  },
+  {
+    "id": "damage-types",
+    "name": "Damage Types",
+    "category": "Damage",
+    "icon": "fa-solid fa-fire-flame-curved",
+    "aliases": [
+      "damage type",
+      "acid damage",
+      "bludgeoning damage",
+      "cold damage",
+      "fire damage",
+      "force damage",
+      "lightning damage",
+      "necrotic damage",
+      "piercing damage",
+      "poison damage",
+      "psychic damage",
+      "radiant damage",
+      "slashing damage",
+      "thunder damage"
+    ],
+    "keywords": [
+      "resistance",
+      "immunity",
+      "vulnerability"
+    ],
+    "preview": "Damage is classified by type; the type matters when another rule refers to it.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "The standard damage types are Acid, Bludgeoning, Cold, Fire, Force, Lightning, Necrotic, Piercing, Poison, Psychic, Radiant, Slashing, and Thunder. A type has no special rule by itself; Resistance, Immunity, Vulnerability, and other effects care about the type."
+      }
+    ],
+    "related": [
+      "resistance",
+      "immunity",
+      "vulnerability"
+    ]
+  },
+  {
+    "id": "darkness",
+    "name": "Darkness",
+    "category": "Vision",
+    "icon": "fa-solid fa-moon",
+    "aliases": [
+      "dark",
+      "dark area"
+    ],
+    "keywords": [
+      "vision",
+      "heavily obscured"
+    ],
+    "preview": "Darkness is Heavily Obscured.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "An area of Darkness counts as Heavily Obscured."
+      }
+    ],
+    "related": [
+      "heavily-obscured",
+      "darkvision"
+    ]
+  },
+  {
+    "id": "darkvision",
+    "name": "Darkvision",
+    "category": "Vision",
+    "icon": "fa-solid fa-eye",
+    "aliases": [
+      "dark vision"
+    ],
+    "keywords": [
+      "dim light",
+      "darkness",
+      "gray"
+    ],
+    "preview": "Darkvision improves vision in Dim Light and Darkness within a stated range.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Within its range, Darkvision treats Dim Light as Bright Light and Darkness as Dim Light. In Darkness, colors are seen only as shades of gray."
+      }
+    ],
+    "related": [
+      "dim-light",
+      "darkness"
+    ]
+  },
+  {
+    "id": "dash",
+    "name": "Dash",
+    "category": "Action",
+    "icon": "fa-solid fa-person-running",
+    "aliases": [
+      "dash action",
+      "run",
+      "sprint"
+    ],
+    "keywords": [
+      "movement",
+      "speed",
+      "double move"
+    ],
+    "preview": "Gain extra movement for the current turn equal to the speed you choose to use.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "When you Dash, increase the movement available to you this turn by the chosen Speed after modifiers. If you have a special speed, you can choose that speed for the Dash."
+      }
+    ],
+    "related": [
+      "speed"
+    ]
+  },
+  {
+    "id": "dead",
+    "name": "Dead",
+    "category": "Damage",
+    "icon": "fa-solid fa-skull",
+    "aliases": [
+      "death",
+      "dead creature",
+      "died"
+    ],
+    "keywords": [
+      "revive",
+      "hit points"
+    ],
+    "preview": "A dead creature has no Hit Points and cannot regain them until revived.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A dead creature cannot regain Hit Points unless a revival effect first returns it to life. The creature's spirit knows who is trying to revive it and can refuse."
+      }
+    ],
+    "related": [
+      "hit-points"
+    ]
+  },
+  {
+    "id": "deafened",
+    "name": "Deafened",
+    "category": "Condition",
+    "icon": "fa-solid fa-ear-deaf",
+    "aliases": [
+      "deaf",
+      "deafened condition"
+    ],
+    "keywords": [
+      "hearing"
+    ],
+    "preview": "You cannot hear and automatically fail checks that require hearing.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "While Deafened, you cannot hear and automatically fail any ability check that requires hearing."
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "death-saving-throw",
+    "name": "Death Saving Throw",
+    "category": "Damage",
+    "icon": "fa-solid fa-skull",
+    "aliases": [
+      "death save",
+      "death saves",
+      "dying",
+      "0 hp"
+    ],
+    "keywords": [
+      "stable",
+      "unconscious",
+      "hit points",
+      "natural 20",
+      "natural 1"
+    ],
+    "preview": "A player character at 0 Hit Points makes a Death Save at the start of each turn.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Roll",
+        "body": "At the start of your turn at 0 Hit Points, make a Death Saving Throw unless you are Stable."
+      },
+      {
+        "heading": "Success and Failure",
+        "body": "A 10 or higher is a success; a 9 or lower is a failure. Three successes make you Stable; three failures cause death. Successes and failures reset when you regain Hit Points or become Stable."
+      },
+      {
+        "heading": "Natural 1 or 20",
+        "body": "A natural 1 counts as two failures. A natural 20 causes you to regain 1 Hit Point."
+      },
+      {
+        "heading": "Damage at 0 HP",
+        "body": "Taking damage at 0 HP causes a failed Death Save; a Critical Hit causes two failures. If the damage equals or exceeds your Hit Point maximum, you die outright."
+      }
+    ],
+    "related": [
+      "stable",
+      "unconscious",
+      "hit-points"
+    ]
+  },
+  {
+    "id": "dehydration",
+    "name": "Dehydration",
+    "category": "Hazard",
+    "icon": "fa-solid fa-droplet",
+    "aliases": [
+      "thirst",
+      "water needs",
+      "dehydrated"
+    ],
+    "keywords": [
+      "exhaustion",
+      "water"
+    ],
+    "preview": "Too little water causes Exhaustion that cannot be removed until enough water is consumed.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If you drink less than half your daily water requirement, gain 1 Exhaustion level at day's end. Exhaustion from dehydration cannot be removed until you drink your full daily requirement."
+      }
+    ],
+    "related": [
+      "exhaustion"
+    ]
+  },
+  {
+    "id": "difficult-terrain",
+    "name": "Difficult Terrain",
+    "category": "Movement",
+    "icon": "fa-solid fa-mountain",
+    "aliases": [
+      "rough terrain",
+      "difficult ground",
+      "terrain"
+    ],
+    "keywords": [
+      "movement",
+      "speed",
+      "extra movement"
+    ],
+    "preview": "Each foot moved through Difficult Terrain costs 1 extra foot.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Moving 5 feet through Difficult Terrain normally costs 10 feet of movement. Difficult Terrain does not stack with itself."
+      }
+    ],
+    "related": [
+      "speed",
+      "climbing",
+      "crawling",
+      "swimming"
+    ]
+  },
+  {
+    "id": "difficulty-class",
+    "name": "Difficulty Class",
+    "category": "D20 Test",
+    "icon": "fa-solid fa-bullseye",
+    "aliases": [
+      "dc",
+      "difficulty"
+    ],
+    "keywords": [
+      "target number",
+      "ability check",
+      "saving throw"
+    ],
+    "preview": "The target number for an ability check or saving throw.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A Difficulty Class (DC) is the number an ability check or saving throw must meet or exceed to succeed, unless the rule says otherwise."
+      }
+    ],
+    "related": [
+      "ability-check",
+      "saving-throw"
+    ]
+  },
+  {
+    "id": "dim-light",
+    "name": "Dim Light",
+    "category": "Vision",
+    "icon": "fa-solid fa-cloud-sun",
+    "aliases": [
+      "dimly lit",
+      "low light",
+      "dim"
+    ],
+    "keywords": [
+      "vision",
+      "lightly obscured"
+    ],
+    "preview": "Dim Light is Lightly Obscured.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "An area of Dim Light counts as Lightly Obscured."
+      }
+    ],
+    "related": [
+      "lightly-obscured",
+      "darkvision"
+    ]
+  },
+  {
+    "id": "disadvantage",
+    "name": "Disadvantage",
+    "category": "D20 Test",
+    "icon": "fa-solid fa-arrow-down",
+    "aliases": [
+      "disadv",
+      "disadvantage roll"
+    ],
+    "keywords": [
+      "d20",
+      "two dice",
+      "lower"
+    ],
+    "preview": "Roll two d20s and use the lower result.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Disadvantage causes you to roll two d20s for a D20 Test and use the lower roll. Multiple sources of Disadvantage do not stack. Advantage and Disadvantage on the same roll cancel each other."
+      }
+    ],
+    "related": [
+      "advantage",
+      "d20-test"
+    ]
+  },
+  {
+    "id": "disengage",
+    "name": "Disengage",
+    "category": "Action",
+    "icon": "fa-solid fa-person-walking-arrow-right",
+    "aliases": [
+      "disengage action",
+      "withdraw"
+    ],
+    "keywords": [
+      "opportunity attack",
+      "movement",
+      "reaction"
+    ],
+    "preview": "Your movement does not provoke Opportunity Attacks for the rest of the turn.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "After taking the Disengage action, movement you make for the rest of the current turn does not provoke Opportunity Attacks."
+      }
+    ],
+    "related": [
+      "opportunity-attacks"
+    ]
+  },
+  {
+    "id": "dodge",
+    "name": "Dodge",
+    "category": "Action",
+    "icon": "fa-solid fa-person-circle-xmark",
+    "aliases": [
+      "dodge action",
+      "defend"
+    ],
+    "keywords": [
+      "disadvantage",
+      "dexterity save",
+      "incapacitated"
+    ],
+    "preview": "Defend yourself until the start of your next turn.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Attacks Against You",
+        "body": "Attack rolls against you have Disadvantage if you can see the attacker."
+      },
+      {
+        "heading": "Dexterity Saves",
+        "body": "You make Dexterity saving throws with Advantage."
+      },
+      {
+        "heading": "Ends Early",
+        "body": "You lose these benefits if you become Incapacitated or your Speed becomes 0."
+      }
+    ],
+    "related": [
+      "advantage",
+      "disadvantage",
+      "incapacitated"
+    ]
+  },
+  {
+    "id": "emanation",
+    "name": "Emanation",
+    "category": "Area of Effect",
+    "icon": "fa-solid fa-sun",
+    "aliases": [
+      "emanation aoe",
+      "emanation area",
+      "aura"
+    ],
+    "keywords": [
+      "area of effect",
+      "origin"
+    ],
+    "preview": "An Emanation extends outward from a creature or object and normally moves with it.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "An Emanation extends in all directions from its origin. It moves with that creature or object unless the effect is instantaneous or stationary. The origin is excluded unless the creator chooses to include it."
+      }
+    ],
+    "related": [
+      "area-of-effect"
+    ]
+  },
+  {
+    "id": "encounter",
+    "name": "Encounter",
+    "category": "Core",
+    "icon": "fa-solid fa-people-group",
+    "aliases": [
+      "encounters"
+    ],
+    "keywords": [
+      "combat",
+      "exploration",
+      "social"
+    ],
+    "preview": "An encounter is a scene involving social interaction, exploration, combat, or more than one pillar.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Encounter is a scene in an adventure that belongs to at least one of the game's major play pillars."
+      }
+    ],
+    "related": [
+      "adventure"
+    ]
+  },
+  {
+    "id": "enemy",
+    "name": "Enemy",
+    "category": "Core",
+    "icon": "fa-solid fa-user-xmark",
+    "aliases": [
+      "enemies",
+      "hostile creature"
+    ],
+    "keywords": [
+      "combat",
+      "opponent"
+    ],
+    "preview": "An enemy is a creature opposing or actively trying to harm you.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A creature fighting against you, actively working to harm you, or designated as an enemy by a rule or the DM counts as your enemy."
+      }
+    ],
+    "related": [
+      "ally"
+    ]
+  },
+  {
+    "id": "exhaustion",
+    "name": "Exhaustion",
+    "category": "Condition",
+    "icon": "fa-solid fa-battery-quarter",
+    "aliases": [
+      "exhausted",
+      "exhaustion levels",
+      "fatigue"
+    ],
+    "keywords": [
+      "-2",
+      "speed",
+      "long rest",
+      "death"
+    ],
+    "preview": "Exhaustion accumulates in levels and penalizes D20 Tests and Speed.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Levels",
+        "body": "Each time you gain Exhaustion, gain 1 level. At level 6, you die."
+      },
+      {
+        "heading": "D20 Tests",
+        "body": "Subtract 2 from every D20 Test for each Exhaustion level."
+      },
+      {
+        "heading": "Speed",
+        "body": "Reduce your Speed by 5 feet for each Exhaustion level."
+      },
+      {
+        "heading": "Recovery",
+        "body": "Finishing a Long Rest removes 1 Exhaustion level. The condition ends at level 0."
+      }
+    ],
+    "related": [
+      "long-rest",
+      "d20-test",
+      "speed"
+    ]
+  },
+  {
+    "id": "experience-points",
+    "name": "Experience Points",
+    "category": "Core",
+    "icon": "fa-solid fa-star",
+    "aliases": [
+      "xp",
+      "experience"
+    ],
+    "keywords": [
+      "level",
+      "advancement"
+    ],
+    "preview": "Characters can gain XP for overcoming challenges and adventures.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "The DM awards Experience Points. Crossing level thresholds increases a character's level when the campaign uses XP advancement."
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "expertise",
+    "name": "Expertise",
+    "category": "D20 Test",
+    "icon": "fa-solid fa-award",
+    "aliases": [
+      "double proficiency",
+      "expertise skill"
+    ],
+    "keywords": [
+      "skill",
+      "proficiency",
+      "double"
+    ],
+    "preview": "Expertise doubles your Proficiency Bonus for a chosen skill proficiency.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "When making an ability check with a skill in which you have Expertise, double your Proficiency Bonus unless another feature is already doubling it. Expertise in the same skill does not stack."
+      }
+    ],
+    "related": [
+      "proficiency",
+      "skill"
+    ]
+  },
+  {
+    "id": "falling",
+    "name": "Falling",
+    "category": "Hazard",
+    "icon": "fa-solid fa-person-falling",
+    "aliases": [
+      "fall damage",
+      "falling damage",
+      "fall into water"
+    ],
+    "keywords": [
+      "1d6",
+      "10 feet",
+      "20d6",
+      "prone",
+      "water"
+    ],
+    "preview": "Falling deals 1d6 Bludgeoning damage per 10 feet, up to 20d6.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Damage",
+        "body": "At the end of a fall, take 1d6 Bludgeoning damage for every 10 feet fallen, to a maximum of 20d6. If you take any fall damage, you land Prone."
+      },
+      {
+        "heading": "Falling into Liquid",
+        "body": "You can use your Reaction to make a DC 15 Strength (Athletics) or Dexterity (Acrobatics) check to enter head- or feet-first; on a success, halve the fall damage."
+      }
+    ],
+    "related": [
+      "prone",
+      "reaction"
+    ]
+  },
+  {
+    "id": "finesse",
+    "name": "Finesse",
+    "category": "Weapon Property",
+    "icon": "fa-solid fa-feather",
+    "aliases": [
+      "finesse property",
+      "dex weapon"
+    ],
+    "keywords": [
+      "strength",
+      "dexterity",
+      "attack",
+      "damage"
+    ],
+    "preview": "A Finesse weapon can use Strength or Dexterity for attack and damage rolls.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Choose Strength or Dexterity for the attack and damage rolls of a Finesse weapon, and use the same ability for both rolls."
+      }
+    ],
+    "related": [
+      "weapon"
+    ]
+  },
+  {
+    "id": "fly-speed",
+    "name": "Fly Speed",
+    "category": "Movement",
+    "icon": "fa-solid fa-dove",
+    "aliases": [
+      "flying speed"
+    ],
+    "keywords": [
+      "speed",
+      "fly",
+      "air"
+    ],
+    "preview": "A Fly Speed lets you travel through the air.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A creature with a Fly Speed can stay aloft until it lands, falls, or dies, subject to the rules for Flying."
+      }
+    ],
+    "related": [
+      "flying",
+      "speed"
+    ]
+  },
+  {
+    "id": "flying",
+    "name": "Flying",
+    "category": "Movement",
+    "icon": "fa-solid fa-feather-pointed",
+    "aliases": [
+      "flight",
+      "flying rules"
+    ],
+    "keywords": [
+      "fly speed",
+      "hover",
+      "fall",
+      "prone",
+      "incapacitated"
+    ],
+    "preview": "A flying creature can fall if it is disabled unless it can hover.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "While flying, you fall if you become Incapacitated or Prone or if your Fly Speed becomes 0, unless you can hover."
+      }
+    ],
+    "related": [
+      "fly-speed",
+      "falling"
+    ]
+  },
+  {
+    "id": "friendly",
+    "name": "Friendly",
+    "category": "Social",
+    "icon": "fa-solid fa-face-smile",
+    "aliases": [
+      "friendly attitude"
+    ],
+    "keywords": [
+      "influence",
+      "advantage"
+    ],
+    "preview": "A Friendly creature views you favorably.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "You have Advantage on an ability check to influence a Friendly creature."
+      }
+    ],
+    "related": [
+      "influence",
+      "advantage"
+    ]
+  },
+  {
+    "id": "frightened",
+    "name": "Frightened",
+    "category": "Condition",
+    "icon": "fa-solid fa-face-frown-open",
+    "aliases": [
+      "frightened condition",
+      "afraid",
+      "fear"
+    ],
+    "keywords": [
+      "disadvantage",
+      "line of sight",
+      "movement"
+    ],
+    "preview": "Fear hinders your checks and attacks and stops you from approaching its source.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Checks and Attacks",
+        "body": "You have Disadvantage on ability checks and attack rolls while the source of fear is within line of sight."
+      },
+      {
+        "heading": "Can't Approach",
+        "body": "You cannot willingly move closer to the source of your fear."
+      }
+    ],
+    "related": [
+      "disadvantage"
     ]
   },
   {
@@ -121,34 +2171,30 @@
     "category": "Condition",
     "icon": "fa-solid fa-hand",
     "aliases": [
-      "grapple",
+      "grappled condition",
       "grabbed",
-      "held",
-      "grappled condition"
+      "held"
     ],
     "keywords": [
-      "speed",
-      "movement",
-      "drag",
-      "carry",
-      "attack",
+      "speed 0",
       "disadvantage",
-      "condition"
+      "drag",
+      "carry"
     ],
-    "preview": "Your Speed becomes 0, some attacks are hindered, and the grappler can move you.",
-    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "preview": "Your Speed is 0, some attacks are hindered, and the grappler can move you.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
     "text": [
       {
         "heading": "Speed 0",
-        "body": "Your Speed becomes 0 and cannot be increased while you are Grappled."
+        "body": "Your Speed is 0 and cannot increase."
       },
       {
-        "heading": "Attacks Affected",
-        "body": "You have Disadvantage on attack rolls against targets other than the creature grappling you."
+        "heading": "Attacks",
+        "body": "You have Disadvantage on attack rolls against targets other than the grappler."
       },
       {
         "heading": "Movable",
-        "body": "The grappler can drag or carry you while moving. Each foot it moves normally costs 1 additional foot unless you are Tiny or at least two sizes smaller than the grappler."
+        "body": "The grappler can drag or carry you. Each foot normally costs the grappler 1 extra foot unless you are Tiny or at least two sizes smaller."
       }
     ],
     "related": [
@@ -163,45 +2209,210 @@
     "icon": "fa-solid fa-hands",
     "aliases": [
       "grapple",
-      "grappling rules",
       "escape grapple",
-      "escape a grapple",
-      "ending a grapple"
+      "grappling rules"
     ],
     "keywords": [
-      "grappled",
-      "unarmed strike",
-      "escape",
       "athletics",
       "acrobatics",
-      "free hand",
-      "incapacitated"
+      "escape dc",
+      "unarmed"
     ],
     "preview": "Rules for starting, maintaining, and ending a grapple.",
-    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "source": "2024 Basic Rules / SRD 5.2.1",
     "text": [
       {
-        "heading": "Starting a Grapple",
-        "body": "Characters usually grapple through an Unarmed Strike, while some creatures have special attacks that grapple. A successful grapple gives the target the Grappled condition."
+        "heading": "Start",
+        "body": "Characters usually grapple through the Grapple option of an Unarmed Strike; a successful grapple gives the target the Grappled condition."
       },
       {
-        "heading": "One Grapple per Hand",
-        "body": "You normally need a free hand to grapple. A hand, tentacle, maw, or other body part used to hold one creature cannot grapple another creature or be used to target another creature unless that grapple ends."
+        "heading": "One per Grasping Part",
+        "body": "A free hand or other specified body part used to grapple one creature cannot grapple another or target another creature unless that grapple ends."
       },
       {
-        "heading": "Ending a Grapple",
-        "body": "A Grappled creature can take an action to make a Strength (Athletics) or Dexterity (Acrobatics) check against the grapple's escape DC. Success ends the condition on that creature."
+        "heading": "Escape",
+        "body": "A Grappled creature can use its action to make Strength (Athletics) or Dexterity (Acrobatics) against the grapple's escape DC, ending the condition on a success."
       },
       {
-        "heading": "Other Ways It Ends",
-        "body": "The grapple also ends if the grappler becomes Incapacitated or the target moves beyond the grapple's range. The grappler may also release the target at any time without using an action."
+        "heading": "Other Endings",
+        "body": "The grapple ends if the grappler becomes Incapacitated, the target moves beyond the grapple's range, or the grappler releases the target. Releasing requires no action."
       }
     ],
     "related": [
       "grappled",
       "unarmed-strike",
-      "ability-check"
+      "incapacitated"
     ]
+  },
+  {
+    "id": "hazard",
+    "name": "Hazard",
+    "category": "Hazard",
+    "icon": "fa-solid fa-triangle-exclamation",
+    "aliases": [
+      "environmental hazard",
+      "hazards"
+    ],
+    "keywords": [
+      "burning",
+      "dehydration",
+      "falling",
+      "malnutrition",
+      "suffocation"
+    ],
+    "preview": "A hazard is an environmental danger.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Common rules hazards include Burning, Dehydration, Falling, Malnutrition, and Suffocation."
+      }
+    ],
+    "related": [
+      "burning",
+      "dehydration",
+      "falling",
+      "malnutrition",
+      "suffocation"
+    ]
+  },
+  {
+    "id": "healing",
+    "name": "Healing",
+    "category": "Damage",
+    "icon": "fa-solid fa-kit-medical",
+    "aliases": [
+      "heal",
+      "healing rules",
+      "regain hp"
+    ],
+    "keywords": [
+      "hit points",
+      "recovery"
+    ],
+    "preview": "Healing restores lost Hit Points up to a creature's maximum.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Healing restores Hit Points but cannot raise them above the Hit Point maximum. Rules that grant Temporary Hit Points are not healing."
+      }
+    ],
+    "related": [
+      "hit-points",
+      "temporary-hit-points"
+    ]
+  },
+  {
+    "id": "heavily-obscured",
+    "name": "Heavily Obscured",
+    "category": "Vision",
+    "icon": "fa-solid fa-smog",
+    "aliases": [
+      "heavy obscurement",
+      "heavily obscured area",
+      "fog"
+    ],
+    "keywords": [
+      "blinded",
+      "vision",
+      "darkness"
+    ],
+    "preview": "You are effectively Blinded when trying to see something in a Heavily Obscured space.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "When trying to see something in a Heavily Obscured space, you have the Blinded condition for that purpose."
+      }
+    ],
+    "related": [
+      "blinded",
+      "darkness"
+    ]
+  },
+  {
+    "id": "heavy",
+    "name": "Heavy",
+    "category": "Weapon Property",
+    "icon": "fa-solid fa-weight-hanging",
+    "aliases": [
+      "heavy property",
+      "heavy weapon"
+    ],
+    "keywords": [
+      "strength 13",
+      "dexterity 13",
+      "disadvantage"
+    ],
+    "preview": "Heavy weapons impose Disadvantage if the relevant ability score is below 13.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "For a Heavy Melee weapon, you have Disadvantage on attack rolls if Strength is below 13. For a Heavy Ranged weapon, you have Disadvantage if Dexterity is below 13."
+      }
+    ],
+    "related": [
+      "disadvantage"
+    ]
+  },
+  {
+    "id": "help",
+    "name": "Help",
+    "category": "Action",
+    "icon": "fa-solid fa-handshake-angle",
+    "aliases": [
+      "help action",
+      "aid another",
+      "assist"
+    ],
+    "keywords": [
+      "advantage",
+      "ally",
+      "ability check",
+      "attack"
+    ],
+    "preview": "Assist an ally's ability check or distract an enemy to aid an ally's attack.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Assist a Check",
+        "body": "Choose a skill or tool proficiency you have and an ally close enough to assist. That ally has Advantage on its next applicable check before the start of your next turn, if the DM agrees the help is possible."
+      },
+      {
+        "heading": "Assist an Attack",
+        "body": "Distract an enemy within 5 feet of you. The next attack roll by one of your allies against that enemy has Advantage if made before the start of your next turn."
+      }
+    ],
+    "related": [
+      "advantage",
+      "ability-check",
+      "attack-roll"
+    ]
+  },
+  {
+    "id": "heroic-inspiration",
+    "name": "Heroic Inspiration",
+    "category": "Core",
+    "icon": "fa-solid fa-star",
+    "aliases": [
+      "inspiration",
+      "heroic inspiration reroll"
+    ],
+    "keywords": [
+      "reroll",
+      "die"
+    ],
+    "preview": "Spend Heroic Inspiration to reroll a die immediately after rolling it.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A player character with Heroic Inspiration can expend it to reroll any die immediately after rolling and must use the new roll. If you gain Heroic Inspiration while already having it, you can pass the new Inspiration to another player character who lacks it."
+      }
+    ],
+    "related": []
   },
   {
     "id": "hide",
@@ -213,36 +2424,965 @@
       "hiding",
       "stealth",
       "hidden",
-      "become hidden"
+      "sneak"
     ],
     "keywords": [
-      "dexterity",
-      "stealth",
+      "dc 15",
       "invisible",
       "perception",
-      "line of sight",
-      "heavily obscured",
       "cover",
-      "dc 15"
+      "line of sight"
     ],
-    "preview": "Make a Stealth check from suitable concealment to become hidden until something reveals you.",
-    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "preview": "Make a Stealth check from suitable concealment to become hidden.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
     "text": [
       {
         "heading": "Requirements",
-        "body": "To Hide, make a DC 15 Dexterity (Stealth) check while Heavily Obscured or behind Three-Quarters or Total Cover. You must also be outside every enemy's line of sight."
+        "body": "Make a DC 15 Dexterity (Stealth) check while Heavily Obscured or behind Three-Quarters or Total Cover, and while outside every enemy's line of sight."
       },
       {
-        "heading": "Successful Check",
-        "body": "On a success, you have the Invisible condition while you remain hidden. Record the total of your Stealth check; that number becomes the DC for a creature trying to find you with Wisdom (Perception)."
+        "heading": "On a Success",
+        "body": "You have the Invisible condition while hidden. Your Stealth total becomes the DC for a creature trying to find you with Wisdom (Perception)."
       },
       {
-        "heading": "Revealing Yourself",
-        "body": "You immediately stop being hidden if you make a sound louder than a whisper, an enemy finds you, you make an attack roll, or you cast a spell that has a Verbal component."
+        "heading": "You Stop Being Hidden",
+        "body": "You stop being hidden after making a sound louder than a whisper, being found by an enemy, making an attack roll, or casting a spell with a Verbal component."
       }
     ],
     "related": [
-      "cover"
+      "invisible",
+      "cover",
+      "heavily-obscured",
+      "passive-perception"
+    ]
+  },
+  {
+    "id": "high-jump",
+    "name": "High Jump",
+    "category": "Movement",
+    "icon": "fa-solid fa-arrow-up",
+    "aliases": [
+      "vertical jump",
+      "standing high jump"
+    ],
+    "keywords": [
+      "strength modifier",
+      "10 feet",
+      "reach"
+    ],
+    "preview": "With a 10-foot run-up, jump vertically 3 + your Strength modifier feet.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Running High Jump",
+        "body": "After moving at least 10 feet on foot, jump a number of feet equal to 3 + your Strength modifier, minimum 0."
+      },
+      {
+        "heading": "Standing High Jump",
+        "body": "Without the run-up, jump half that height."
+      },
+      {
+        "heading": "Vertical Reach",
+        "body": "During the jump, you can extend your arms half your height above yourself, for a total reach of the jump height plus 1.5 times your height."
+      }
+    ],
+    "related": [
+      "jumping",
+      "long-jump"
+    ]
+  },
+  {
+    "id": "hit-point-dice",
+    "name": "Hit Point Dice",
+    "category": "Damage",
+    "icon": "fa-solid fa-dice",
+    "aliases": [
+      "hit dice",
+      "hd",
+      "hit die",
+      "hit point die"
+    ],
+    "keywords": [
+      "short rest",
+      "healing",
+      "constitution",
+      "hp"
+    ],
+    "preview": "Hit Point Dice help determine Hit Points and can be spent during a Short Rest to heal.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Short Rest",
+        "body": "During a Short Rest, you can spend Hit Point Dice one at a time. Roll a spent die, add your Constitution modifier, and regain at least 1 Hit Point from that die."
+      }
+    ],
+    "related": [
+      "short-rest",
+      "hit-points"
+    ]
+  },
+  {
+    "id": "hit-points",
+    "name": "Hit Points",
+    "category": "Damage",
+    "icon": "fa-solid fa-heart",
+    "aliases": [
+      "hp",
+      "health",
+      "hit point"
+    ],
+    "keywords": [
+      "damage",
+      "healing",
+      "0 hp"
+    ],
+    "preview": "Hit Points measure how difficult a creature or object is to kill or destroy.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Damage reduces Hit Points and healing restores them. Hit Points cannot exceed the maximum or fall below 0."
+      }
+    ],
+    "related": [
+      "damage",
+      "healing",
+      "death-saving-throw"
+    ]
+  },
+  {
+    "id": "hostile",
+    "name": "Hostile",
+    "category": "Social",
+    "icon": "fa-solid fa-face-angry",
+    "aliases": [
+      "hostile attitude"
+    ],
+    "keywords": [
+      "influence",
+      "disadvantage"
+    ],
+    "preview": "A Hostile creature views you unfavorably.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "You have Disadvantage on an ability check to influence a Hostile creature."
+      }
+    ],
+    "related": [
+      "influence",
+      "disadvantage"
+    ]
+  },
+  {
+    "id": "hover",
+    "name": "Hover",
+    "category": "Movement",
+    "icon": "fa-solid fa-feather-pointed",
+    "aliases": [
+      "hovering",
+      "hover speed"
+    ],
+    "keywords": [
+      "fly",
+      "flying",
+      "fall",
+      "prone",
+      "incapacitated"
+    ],
+    "preview": "Hovering can keep a flying creature aloft in situations that would normally make it fall.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A creature that can hover can remain aloft in certain circumstances that would otherwise cause a flying creature to fall, such as becoming Prone, Incapacitated, or having its Fly Speed reduced to 0."
+      }
+    ],
+    "related": [
+      "flying",
+      "fly-speed",
+      "falling"
+    ]
+  },
+  {
+    "id": "illusions",
+    "name": "Illusions",
+    "category": "Magic",
+    "icon": "fa-solid fa-masks-theater",
+    "aliases": [
+      "illusion rules",
+      "illusory"
+    ],
+    "keywords": [
+      "spell",
+      "visual",
+      "sound"
+    ],
+    "preview": "An illusion's creating effect defines what senses or mental faculties it deceives.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Illusions are insubstantial and weightless unless their rule says otherwise, but they can appear to interact naturally with the environment, such as casting shadows or echoes."
+      }
+    ],
+    "related": [
+      "truesight"
+    ]
+  },
+  {
+    "id": "immunity",
+    "name": "Immunity",
+    "category": "Damage",
+    "icon": "fa-solid fa-shield",
+    "aliases": [
+      "immune",
+      "damage immunity",
+      "condition immunity"
+    ],
+    "keywords": [
+      "damage",
+      "condition"
+    ],
+    "preview": "Immunity means the specified damage type or condition does not affect you.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If you have Immunity to a damage type or condition, that damage type or condition does not affect you."
+      }
+    ],
+    "related": [
+      "resistance",
+      "vulnerability"
+    ]
+  },
+  {
+    "id": "improvised-weapons",
+    "name": "Improvised Weapons",
+    "category": "Equipment",
+    "icon": "fa-solid fa-hammer",
+    "aliases": [
+      "improvised weapon",
+      "makeshift weapon",
+      "throw random object"
+    ],
+    "keywords": [
+      "1d4",
+      "20/60",
+      "no proficiency"
+    ],
+    "preview": "Objects used as makeshift weapons normally deal 1d4 damage and lack proficiency.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Proficiency",
+        "body": "Do not add your Proficiency Bonus to an improvised weapon attack unless the DM treats the object as an actual weapon it resembles."
+      },
+      {
+        "heading": "Damage",
+        "body": "A basic improvised weapon deals 1d4 damage of a type the DM considers appropriate."
+      },
+      {
+        "heading": "Thrown Range",
+        "body": "A thrown improvised weapon has normal range 20 feet and long range 60 feet."
+      }
+    ],
+    "related": [
+      "weapon-range",
+      "weapon-proficiency"
+    ]
+  },
+  {
+    "id": "incapacitated",
+    "name": "Incapacitated",
+    "category": "Condition",
+    "icon": "fa-solid fa-ban",
+    "aliases": [
+      "incapacitated condition",
+      "incap"
+    ],
+    "keywords": [
+      "action",
+      "bonus action",
+      "reaction",
+      "concentration",
+      "initiative"
+    ],
+    "preview": "You cannot take actions, Bonus Actions, or Reactions, and your Concentration ends.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Inactive",
+        "body": "You cannot take an action, Bonus Action, or Reaction."
+      },
+      {
+        "heading": "No Concentration",
+        "body": "Your Concentration is broken."
+      },
+      {
+        "heading": "Speechless",
+        "body": "You cannot speak."
+      },
+      {
+        "heading": "Initiative",
+        "body": "If you are Incapacitated when Initiative is rolled, you have Disadvantage on the roll."
+      }
+    ],
+    "related": [
+      "concentration",
+      "reaction"
+    ]
+  },
+  {
+    "id": "indifferent",
+    "name": "Indifferent",
+    "category": "Social",
+    "icon": "fa-solid fa-face-meh",
+    "aliases": [
+      "indifferent attitude",
+      "neutral attitude"
+    ],
+    "keywords": [
+      "influence"
+    ],
+    "preview": "An Indifferent creature has no desire to help or hinder you.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Indifferent is the default attitude for a monster unless another rule or the DM establishes a different attitude."
+      }
+    ],
+    "related": [
+      "influence"
+    ]
+  },
+  {
+    "id": "influence",
+    "name": "Influence",
+    "category": "Action",
+    "icon": "fa-solid fa-comments",
+    "aliases": [
+      "influence action",
+      "persuade",
+      "intimidate",
+      "deceive"
+    ],
+    "keywords": [
+      "social",
+      "charisma",
+      "animal handling",
+      "attitude"
+    ],
+    "preview": "Try to persuade, deceive, intimidate, amuse, or coax a monster.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Describe what you want and how you communicate it. The DM decides whether the target is willing, unwilling, or hesitant. A hesitant target may call for an appropriate ability check, such as Deception, Intimidation, Performance, Persuasion, or Animal Handling."
+      }
+    ],
+    "related": [
+      "friendly",
+      "hostile",
+      "indifferent"
+    ]
+  },
+  {
+    "id": "initiative",
+    "name": "Initiative",
+    "category": "Combat",
+    "icon": "fa-solid fa-stopwatch",
+    "aliases": [
+      "initiative roll",
+      "initiative score",
+      "turn order"
+    ],
+    "keywords": [
+      "dexterity",
+      "combat",
+      "advantage",
+      "disadvantage"
+    ],
+    "preview": "Initiative determines turn order in combat.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Roll Initiative as directed by the combat rules. A creature's Initiative score is 10 + Dexterity modifier; if using that score instead of rolling, add 5 for Advantage or subtract 5 for Disadvantage."
+      }
+    ],
+    "related": [
+      "surprise"
+    ]
+  },
+  {
+    "id": "invisible",
+    "name": "Invisible",
+    "category": "Condition",
+    "icon": "fa-solid fa-user-secret",
+    "aliases": [
+      "invisibility",
+      "invisible condition",
+      "hidden"
+    ],
+    "keywords": [
+      "advantage",
+      "disadvantage",
+      "sight",
+      "initiative"
+    ],
+    "preview": "You are concealed from creatures that cannot see you, and attacks are affected.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Initiative",
+        "body": "If you are Invisible when you roll Initiative, you have Advantage on the roll."
+      },
+      {
+        "heading": "Concealed",
+        "body": "Effects that require seeing their target cannot affect you unless the creator can somehow see you. Your worn and carried equipment is concealed too."
+      },
+      {
+        "heading": "Attacks",
+        "body": "Attack rolls against you have Disadvantage and your attack rolls have Advantage, unless the other creature can somehow see you."
+      }
+    ],
+    "related": [
+      "hide",
+      "blindsight",
+      "truesight"
+    ]
+  },
+  {
+    "id": "jumping",
+    "name": "Jumping",
+    "category": "Movement",
+    "icon": "fa-solid fa-person-running",
+    "aliases": [
+      "jump",
+      "jump rules"
+    ],
+    "keywords": [
+      "long jump",
+      "high jump",
+      "movement"
+    ],
+    "preview": "A jump is either a Long Jump or a High Jump.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Use Long Jump for horizontal distance and High Jump for vertical height. Each foot jumped uses a foot of movement."
+      }
+    ],
+    "related": [
+      "long-jump",
+      "high-jump",
+      "speed"
+    ]
+  },
+  {
+    "id": "knocking-out-a-creature",
+    "name": "Knocking Out a Creature",
+    "category": "Damage",
+    "icon": "fa-solid fa-bed",
+    "aliases": [
+      "knockout",
+      "nonlethal damage",
+      "non lethal",
+      "knock unconscious"
+    ],
+    "keywords": [
+      "melee",
+      "unconscious",
+      "medicine",
+      "dc 10"
+    ],
+    "preview": "A melee attack can knock a creature out instead of reducing it to 0 HP.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "When a melee attack would reduce a creature to 0 Hit Points, you can instead leave it at 1 HP, give it the Unconscious condition, and start a Short Rest. It wakes if it regains Hit Points or receives successful first aid."
+      }
+    ],
+    "related": [
+      "unconscious",
+      "short-rest"
+    ]
+  },
+  {
+    "id": "light",
+    "name": "Light",
+    "category": "Weapon Property",
+    "icon": "fa-solid fa-feather-pointed",
+    "aliases": [
+      "light property",
+      "two weapon fighting",
+      "dual wield",
+      "offhand attack"
+    ],
+    "keywords": [
+      "bonus action",
+      "extra attack",
+      "damage modifier"
+    ],
+    "preview": "Attacking with a Light weapon can enable one extra attack with another Light weapon.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "When you take the Attack action and attack with a Light weapon, you can make one extra attack later that turn as a Bonus Action with a different Light weapon. Do not add your ability modifier to that extra attack's damage unless the modifier is negative."
+      }
+    ],
+    "related": [
+      "bonus-action",
+      "attack"
+    ]
+  },
+  {
+    "id": "lightly-obscured",
+    "name": "Lightly Obscured",
+    "category": "Vision",
+    "icon": "fa-solid fa-cloud",
+    "aliases": [
+      "light obscurement",
+      "lightly obscured area"
+    ],
+    "keywords": [
+      "perception",
+      "disadvantage",
+      "vision"
+    ],
+    "preview": "Seeing through a Lightly Obscured space makes visual Perception checks harder.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "You have Disadvantage on Wisdom (Perception) checks made to see something in a Lightly Obscured space."
+      }
+    ],
+    "related": [
+      "dim-light",
+      "disadvantage"
+    ]
+  },
+  {
+    "id": "line",
+    "name": "Line",
+    "category": "Area of Effect",
+    "icon": "fa-solid fa-minus",
+    "aliases": [
+      "line aoe",
+      "line area"
+    ],
+    "keywords": [
+      "area of effect",
+      "origin"
+    ],
+    "preview": "A Line extends straight from its point of origin with a specified length and width.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A Line covers a straight path with a stated length and width. Its origin is excluded unless the creator chooses to include it."
+      }
+    ],
+    "related": [
+      "area-of-effect"
+    ]
+  },
+  {
+    "id": "loading",
+    "name": "Loading",
+    "category": "Weapon Property",
+    "icon": "fa-solid fa-rotate",
+    "aliases": [
+      "loading property",
+      "crossbow loading",
+      "firearm loading"
+    ],
+    "keywords": [
+      "ammunition",
+      "extra attack"
+    ],
+    "preview": "A Loading weapon can fire only one piece of ammunition per action, Bonus Action, or Reaction used to fire it.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Regardless of how many attacks you can normally make, a Loading weapon can fire only one piece of ammunition when you use an action, Bonus Action, or Reaction to fire it."
+      }
+    ],
+    "related": [
+      "ammunition"
+    ]
+  },
+  {
+    "id": "long-jump",
+    "name": "Long Jump",
+    "category": "Movement",
+    "icon": "fa-solid fa-person-running",
+    "aliases": [
+      "horizontal jump",
+      "broad jump",
+      "standing long jump"
+    ],
+    "keywords": [
+      "strength",
+      "10 feet",
+      "acrobatics",
+      "athletics"
+    ],
+    "preview": "With a 10-foot run-up, jump horizontally up to your Strength score in feet.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Running Long Jump",
+        "body": "Move at least 10 feet immediately before the jump to leap up to your Strength score in feet."
+      },
+      {
+        "heading": "Standing Long Jump",
+        "body": "Without the run-up, the maximum distance is half as far."
+      },
+      {
+        "heading": "Landing in Difficult Terrain",
+        "body": "Make a DC 10 Dexterity (Acrobatics) check or become Prone."
+      },
+      {
+        "heading": "Low Obstacles",
+        "body": "The DM may call for a DC 10 Strength (Athletics) check to clear a low obstacle no taller than one-quarter of the jump's distance."
+      }
+    ],
+    "related": [
+      "jumping",
+      "high-jump",
+      "prone"
+    ]
+  },
+  {
+    "id": "long-rest",
+    "name": "Long Rest",
+    "category": "Rest",
+    "icon": "fa-solid fa-bed",
+    "aliases": [
+      "long rest rules",
+      "lr",
+      "sleep"
+    ],
+    "keywords": [
+      "8 hours",
+      "6 hours",
+      "16 hours",
+      "healing",
+      "exhaustion"
+    ],
+    "preview": "An 8-hour extended rest that restores Hit Points, Hit Point Dice, ability scores, and some features.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Duration",
+        "body": "A Long Rest lasts at least 8 hours, including at least 6 hours of sleep and no more than 2 hours of light activity. You must have at least 1 Hit Point to start."
+      },
+      {
+        "heading": "Benefits",
+        "body": "Regain all lost Hit Points and spent Hit Point Dice, restore reduced ability scores, reduce Exhaustion by 1, and recharge features that say they return on a Long Rest."
+      },
+      {
+        "heading": "Frequency",
+        "body": "After finishing a Long Rest, wait at least 16 hours before starting another."
+      },
+      {
+        "heading": "Interruptions",
+        "body": "Initiative, a non-cantrip spell, damage, or 1 hour of walking or similar exertion interrupts the rest. If at least 1 hour was completed, you gain Short Rest benefits. You may resume, adding 1 hour per interruption."
+      }
+    ],
+    "related": [
+      "short-rest",
+      "exhaustion",
+      "hit-points"
+    ]
+  },
+  {
+    "id": "magic",
+    "name": "Magic",
+    "category": "Action",
+    "icon": "fa-solid fa-wand-magic-sparkles",
+    "aliases": [
+      "magic action",
+      "cast spell"
+    ],
+    "keywords": [
+      "spell",
+      "casting",
+      "concentration"
+    ],
+    "preview": "Cast a spell with a casting time of an action or use a magical feature that requires the Magic action.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Magic Action",
+        "body": "Use the Magic action for a spell with a casting time of an action or for a feature or magic item that specifically requires this action."
+      },
+      {
+        "heading": "Long Casting Times",
+        "body": "For a spell with a casting time of 1 minute or longer, take the Magic action on each turn and maintain Concentration during the casting."
+      }
+    ],
+    "related": [
+      "spell",
+      "concentration",
+      "spell-casting-time"
+    ]
+  },
+  {
+    "id": "magical-effect",
+    "name": "Magical Effect",
+    "category": "Magic",
+    "icon": "fa-solid fa-sparkles",
+    "aliases": [
+      "magical effects",
+      "what counts as magic"
+    ],
+    "keywords": [
+      "spell",
+      "magic item"
+    ],
+    "preview": "An effect is magical if it comes from a spell, magic item, or a phenomenon explicitly called magical.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "An effect counts as magical when it is created by a spell, magic item, or another rule that labels the phenomenon magical."
+      }
+    ],
+    "related": [
+      "spell"
+    ]
+  },
+  {
+    "id": "malnutrition",
+    "name": "Malnutrition",
+    "category": "Hazard",
+    "icon": "fa-solid fa-utensils",
+    "aliases": [
+      "starvation",
+      "food needs",
+      "hungry"
+    ],
+    "keywords": [
+      "exhaustion",
+      "food",
+      "constitution"
+    ],
+    "preview": "Too little food can cause Exhaustion.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If you eat less than half your daily food requirement, make a DC 10 Constitution save at day's end or gain 1 Exhaustion level. Eating nothing for 5 days causes Exhaustion automatically and additional levels on later days without food."
+      }
+    ],
+    "related": [
+      "exhaustion"
+    ]
+  },
+  {
+    "id": "material-component",
+    "name": "Material Component",
+    "category": "Magic",
+    "icon": "fa-solid fa-gem",
+    "aliases": [
+      "material",
+      "m component",
+      "material spell component",
+      "component pouch"
+    ],
+    "keywords": [
+      "focus",
+      "cost",
+      "consumed",
+      "free hand"
+    ],
+    "preview": "A Material component requires the specified material or a permitted substitute.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Hand",
+        "body": "You need a free hand to access Material components, and that can be the same hand used for Somatic components."
+      },
+      {
+        "heading": "Pouch or Focus",
+        "body": "If the material is not consumed and has no listed cost, you can use a Component Pouch or an allowed Spellcasting Focus instead."
+      },
+      {
+        "heading": "Costly or Consumed Materials",
+        "body": "A focus or pouch cannot replace a Material component that has a listed cost or is consumed."
+      }
+    ],
+    "related": [
+      "spell-components",
+      "spellcasting-focus"
+    ]
+  },
+  {
+    "id": "melee-attacks",
+    "name": "Melee Attacks",
+    "category": "Combat",
+    "icon": "fa-solid fa-sword",
+    "aliases": [
+      "melee attack",
+      "close attack"
+    ],
+    "keywords": [
+      "reach",
+      "weapon",
+      "unarmed"
+    ],
+    "preview": "A melee attack normally targets something within your reach.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A melee attack allows you to attack a target within your reach, usually with a melee weapon or an Unarmed Strike."
+      }
+    ],
+    "related": [
+      "reach",
+      "unarmed-strike"
+    ]
+  },
+  {
+    "id": "monster",
+    "name": "Monster",
+    "category": "Core",
+    "icon": "fa-solid fa-dragon",
+    "aliases": [
+      "monsters"
+    ],
+    "keywords": [
+      "dm",
+      "creature"
+    ],
+    "preview": "A monster is a creature controlled by the DM.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "In the rules, any creature controlled by the DM is a monster, even if it is friendly or benevolent."
+      }
+    ],
+    "related": [
+      "creature",
+      "nonplayer-character"
+    ]
+  },
+  {
+    "id": "nonplayer-character",
+    "name": "Nonplayer Character",
+    "category": "Core",
+    "icon": "fa-solid fa-user-tie",
+    "aliases": [
+      "npc",
+      "non player character"
+    ],
+    "keywords": [
+      "monster",
+      "dm"
+    ],
+    "preview": "An NPC is a named monster with a distinct personality.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A nonplayer character (NPC) is a DM-controlled monster presented as an individual with a personal name and distinct personality."
+      }
+    ],
+    "related": [
+      "monster"
+    ]
+  },
+  {
+    "id": "object",
+    "name": "Object",
+    "category": "Core",
+    "icon": "fa-solid fa-cube",
+    "aliases": [
+      "objects"
+    ],
+    "keywords": [
+      "nonliving",
+      "breaking"
+    ],
+    "preview": "An object is a distinct nonliving thing.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Composite structures such as buildings can consist of multiple objects for rules purposes."
+      }
+    ],
+    "related": [
+      "breaking-objects"
+    ]
+  },
+  {
+    "id": "occupied-space",
+    "name": "Occupied Space",
+    "category": "Core",
+    "icon": "fa-solid fa-square",
+    "aliases": [
+      "occupied square",
+      "occupied hex"
+    ],
+    "keywords": [
+      "space",
+      "creature"
+    ],
+    "preview": "A space is occupied if a creature is in it or objects completely fill it.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A space counts as occupied when a creature is there or when objects completely fill the space."
+      }
+    ],
+    "related": [
+      "unoccupied-space"
+    ]
+  },
+  {
+    "id": "one-spell-with-a-spell-slot-per-turn",
+    "name": "One Spell with a Spell Slot per Turn",
+    "category": "Magic",
+    "icon": "fa-solid fa-1",
+    "aliases": [
+      "one leveled spell per turn",
+      "one levelled spell per turn",
+      "bonus action spell rule",
+      "two spells same turn",
+      "one spell slot"
+    ],
+    "keywords": [
+      "spell slot",
+      "bonus action",
+      "action",
+      "turn"
+    ],
+    "preview": "On a turn, you can expend only one spell slot to cast a spell.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "During a single turn, you can expend only one spell slot to cast a spell. This prevents, for example, spending a slot on an action spell and another slot on a Bonus Action spell during the same turn."
+      }
+    ],
+    "related": [
+      "spell-slots",
+      "bonus-action"
     ]
   },
   {
@@ -253,38 +3393,264 @@
     "aliases": [
       "opportunity attack",
       "attack of opportunity",
-      "attacks of opportunity",
-      "oa",
-      "reaction attack"
+      "aoo",
+      "oa"
     ],
     "keywords": [
       "reaction",
       "reach",
       "movement",
-      "melee",
-      "weapon",
-      "unarmed strike",
-      "leaving reach"
+      "melee"
     ],
-    "preview": "A Reaction that can punish a creature you can see for leaving your reach in certain ways.",
-    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "preview": "A Reaction that can punish a creature you can see for leaving your reach.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
     "text": [
       {
         "heading": "Trigger",
-        "body": "You can make an Opportunity Attack when a creature you can see leaves your reach by using its action, Bonus Action, Reaction, or one of its speeds."
+        "body": "A creature you can see leaves your reach using its action, Bonus Action, Reaction, or one of its speeds."
       },
       {
-        "heading": "The Attack",
-        "body": "Use your Reaction to make one melee attack with a weapon or an Unarmed Strike against the triggering creature."
+        "heading": "Attack",
+        "body": "Use your Reaction to make one melee attack with a weapon or an Unarmed Strike against the creature."
       },
       {
         "heading": "Timing",
-        "body": "The attack happens immediately before the creature leaves your reach."
+        "body": "The attack occurs immediately before the creature leaves your reach."
       }
     ],
     "related": [
       "reaction",
-      "unarmed-strike"
+      "reach",
+      "disengage"
+    ]
+  },
+  {
+    "id": "paralyzed",
+    "name": "Paralyzed",
+    "category": "Condition",
+    "icon": "fa-solid fa-person-rays",
+    "aliases": [
+      "paralysed",
+      "paralyzed condition"
+    ],
+    "keywords": [
+      "incapacitated",
+      "speed 0",
+      "critical hit"
+    ],
+    "preview": "You are Incapacitated, your Speed is 0, and nearby hits become Critical Hits.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Incapacitated",
+        "body": "You also have the Incapacitated condition."
+      },
+      {
+        "heading": "Speed and Saves",
+        "body": "Your Speed is 0 and cannot increase. You automatically fail Strength and Dexterity saving throws."
+      },
+      {
+        "heading": "Attacks",
+        "body": "Attack rolls against you have Advantage. Any attack roll that hits you from within 5 feet is a Critical Hit."
+      }
+    ],
+    "related": [
+      "incapacitated",
+      "critical-hit"
+    ]
+  },
+  {
+    "id": "passive-perception",
+    "name": "Passive Perception",
+    "category": "Vision",
+    "icon": "fa-solid fa-eye",
+    "aliases": [
+      "passive perception score",
+      "passive wis perception"
+    ],
+    "keywords": [
+      "10",
+      "wisdom",
+      "perception",
+      "advantage",
+      "disadvantage"
+    ],
+    "preview": "A score used when noticing something without actively making a Perception check.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Passive Perception equals 10 + your Wisdom (Perception) check bonus. Add 5 if you have Advantage on such checks or subtract 5 if you have Disadvantage."
+      }
+    ],
+    "related": [
+      "search",
+      "advantage",
+      "disadvantage"
+    ]
+  },
+  {
+    "id": "per-day",
+    "name": "Per Day",
+    "category": "Rest",
+    "icon": "fa-solid fa-calendar-day",
+    "aliases": [
+      "once per day",
+      "times per day",
+      "daily recharge"
+    ],
+    "keywords": [
+      "long rest",
+      "recharge"
+    ],
+    "preview": "A limited use described as 'per day' refreshes after a Long Rest.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If a rule says something can be used a certain number of times per day, finishing a Long Rest restores those uses after you run out."
+      }
+    ],
+    "related": [
+      "long-rest"
+    ]
+  },
+  {
+    "id": "petrified",
+    "name": "Petrified",
+    "category": "Condition",
+    "icon": "fa-solid fa-person",
+    "aliases": [
+      "petrified condition",
+      "turned to stone"
+    ],
+    "keywords": [
+      "incapacitated",
+      "resistance",
+      "poison",
+      "speed 0"
+    ],
+    "preview": "You become an inanimate substance and suffer severe restrictions.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Transformation",
+        "body": "You and nonmagical gear you wear or carry become a solid inanimate substance; your weight increases tenfold and you stop aging."
+      },
+      {
+        "heading": "Disabled",
+        "body": "You are Incapacitated, your Speed is 0, and you automatically fail Strength and Dexterity saves."
+      },
+      {
+        "heading": "Defenses",
+        "body": "Attack rolls against you have Advantage, you have Resistance to all damage, and you are immune to the Poisoned condition."
+      }
+    ],
+    "related": [
+      "incapacitated",
+      "resistance",
+      "poisoned"
+    ]
+  },
+  {
+    "id": "player-character",
+    "name": "Player Character",
+    "category": "Core",
+    "icon": "fa-solid fa-user",
+    "aliases": [
+      "pc",
+      "player character"
+    ],
+    "keywords": [
+      "player"
+    ],
+    "preview": "A player character is a character controlled by a player.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Player character (PC) is the rules term for a character controlled by a player rather than the DM."
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "poisoned",
+    "name": "Poisoned",
+    "category": "Condition",
+    "icon": "fa-solid fa-skull-crossbones",
+    "aliases": [
+      "poisoned condition",
+      "poison"
+    ],
+    "keywords": [
+      "disadvantage",
+      "attack",
+      "ability check"
+    ],
+    "preview": "You have Disadvantage on attack rolls and ability checks.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "While Poisoned, you have Disadvantage on attack rolls and ability checks."
+      }
+    ],
+    "related": [
+      "disadvantage"
+    ]
+  },
+  {
+    "id": "possession",
+    "name": "Possession",
+    "category": "Magic",
+    "icon": "fa-solid fa-ghost",
+    "aliases": [
+      "possessed",
+      "possession rules"
+    ],
+    "keywords": [
+      "spirit",
+      "magic"
+    ],
+    "preview": "A possessing effect defines how possession works.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "The rule that causes possession controls its details. Some protective or cleansing magic can prevent or end possession when specifically stated."
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "proficiency",
+    "name": "Proficiency",
+    "category": "D20 Test",
+    "icon": "fa-solid fa-medal",
+    "aliases": [
+      "proficient",
+      "pb",
+      "proficiency bonus"
+    ],
+    "keywords": [
+      "skill",
+      "weapon",
+      "tool",
+      "saving throw"
+    ],
+    "preview": "Proficiency lets you add your Proficiency Bonus to an applicable D20 Test.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If you are proficient with the skill, save, weapon, or tool being used for a D20 Test, add your Proficiency Bonus when the rule permits it."
+      }
+    ],
+    "related": [
+      "expertise",
+      "skill",
+      "ability-check"
     ]
   },
   {
@@ -300,32 +3666,125 @@
       "standing up"
     ],
     "keywords": [
-      "condition",
       "crawl",
-      "movement",
-      "speed",
+      "half speed",
       "advantage",
-      "disadvantage",
-      "attack"
+      "disadvantage"
     ],
-    "preview": "While Prone, your movement is restricted and attack rolls are affected by distance.",
-    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "preview": "Your movement is restricted and attack rolls are affected by distance.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
     "text": [
       {
-        "heading": "Restricted Movement",
-        "body": "While Prone, you can crawl or spend movement equal to half your Speed, rounded down, to stand and end the condition. If your Speed is 0, you cannot stand this way."
+        "heading": "Movement",
+        "body": "You can crawl or spend movement equal to half your Speed, rounded down, to stand. If your Speed is 0, you cannot stand this way."
       },
       {
         "heading": "Your Attacks",
-        "body": "You have Disadvantage on attack rolls while Prone."
+        "body": "You have Disadvantage on attack rolls."
       },
       {
         "heading": "Attacks Against You",
-        "body": "An attack roll against you has Advantage when the attacker is within 5 feet of you. Otherwise, the attack roll has Disadvantage."
+        "body": "An attack against you has Advantage if the attacker is within 5 feet; otherwise it has Disadvantage."
       }
     ],
     "related": [
-      "unarmed-strike"
+      "crawling",
+      "round-down"
+    ]
+  },
+  {
+    "id": "ranged-attacks",
+    "name": "Ranged Attacks",
+    "category": "Combat",
+    "icon": "fa-solid fa-bullseye",
+    "aliases": [
+      "ranged attack",
+      "shooting",
+      "bow attack",
+      "spell ranged attack"
+    ],
+    "keywords": [
+      "range",
+      "long range",
+      "normal range",
+      "disadvantage"
+    ],
+    "preview": "Ranged attacks can target only creatures or objects within the attack's permitted range.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Single Range",
+        "body": "If an attack has one range value, you cannot attack a target beyond that distance."
+      },
+      {
+        "heading": "Normal and Long Range",
+        "body": "If an attack lists two range values, the smaller is normal range and the larger is long range. Attacks beyond normal range have Disadvantage; targets beyond long range cannot be attacked."
+      }
+    ],
+    "related": [
+      "weapon-range",
+      "ranged-attacks-in-close-combat",
+      "disadvantage"
+    ]
+  },
+  {
+    "id": "ranged-attacks-in-close-combat",
+    "name": "Ranged Attacks in Close Combat",
+    "category": "Combat",
+    "icon": "fa-solid fa-person-rifle",
+    "aliases": [
+      "ranged attack melee",
+      "shooting in melee",
+      "enemy within 5 feet",
+      "ranged close combat",
+      "bow in melee"
+    ],
+    "keywords": [
+      "ranged",
+      "5 feet",
+      "disadvantage",
+      "enemy",
+      "incapacitated"
+    ],
+    "preview": "Ranged attack rolls are harder when an enemy is right next to you.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "You have Disadvantage on a ranged attack roll if you are within 5 feet of an enemy who can see you and does not have the Incapacitated condition."
+      }
+    ],
+    "related": [
+      "ranged-attacks",
+      "disadvantage",
+      "incapacitated"
+    ]
+  },
+  {
+    "id": "reach",
+    "name": "Reach",
+    "category": "Combat",
+    "icon": "fa-solid fa-arrows-left-right",
+    "aliases": [
+      "melee reach",
+      "reach distance"
+    ],
+    "keywords": [
+      "5 feet",
+      "melee",
+      "opportunity attack"
+    ],
+    "preview": "A creature's default reach is 5 feet unless a rule says otherwise.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Unless a feature, size rule, weapon, or effect says otherwise, a creature's reach is 5 feet."
+      }
+    ],
+    "related": [
+      "opportunity-attacks",
+      "weapon-property-reach"
     ]
   },
   {
@@ -339,33 +3798,1277 @@
     ],
     "keywords": [
       "trigger",
-      "turn",
-      "combat",
       "opportunity attack",
-      "response"
+      "action economy"
     ],
-    "preview": "A special response to a defined trigger, normally usable once before the start of your next turn.",
-    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "preview": "A special action taken in response to a defined trigger.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
     "text": [
       {
-        "heading": "Triggered Response",
-        "body": "A Reaction is a special action taken in response to a trigger described by the rule that grants the Reaction."
-      },
-      {
-        "heading": "When You Can React",
-        "body": "You can take a Reaction during another creature's turn. You may also take one during your own turn even if you also use an action, a Bonus Action, or both."
-      },
-      {
-        "heading": "One at a Time",
-        "body": "After you take a Reaction, you cannot take another until the start of your next turn."
-      },
-      {
-        "heading": "Common Reaction",
-        "body": "Opportunity Attacks are a Reaction available to all creatures."
+        "heading": null,
+        "body": "You can take a Reaction on another creature's turn or your own turn when its trigger occurs. After taking one, you can't take another until the start of your next turn."
       }
     ],
     "related": [
-      "opportunity-attacks"
+      "opportunity-attacks",
+      "ready"
+    ]
+  },
+  {
+    "id": "ready",
+    "name": "Ready",
+    "category": "Action",
+    "icon": "fa-solid fa-hourglass-start",
+    "aliases": [
+      "ready action",
+      "hold action",
+      "held action",
+      "prepare action"
+    ],
+    "keywords": [
+      "reaction",
+      "trigger",
+      "concentration",
+      "spell"
+    ],
+    "preview": "Set a trigger and prepare an action or movement to use with your Reaction.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Choose a Trigger",
+        "body": "Describe a perceivable circumstance and choose an action or movement up to your Speed to use if it occurs before the start of your next turn."
+      },
+      {
+        "heading": "Reaction",
+        "body": "When the trigger finishes, you may use your Reaction to do the readied response or ignore the trigger."
+      },
+      {
+        "heading": "Ready a Spell",
+        "body": "The spell must have a casting time of an action. You cast it when you Ready it, expend any resources then, and maintain Concentration until you release it with your Reaction or the opportunity expires."
+      }
+    ],
+    "related": [
+      "reaction",
+      "concentration"
+    ]
+  },
+  {
+    "id": "resistance",
+    "name": "Resistance",
+    "category": "Damage",
+    "icon": "fa-solid fa-shield-heart",
+    "aliases": [
+      "damage resistance",
+      "resist"
+    ],
+    "keywords": [
+      "half damage",
+      "round down"
+    ],
+    "preview": "Resistance halves damage of the specified type.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If you have Resistance to a damage type, halve that damage against you and round down. Resistance applies only once to a single instance of damage."
+      }
+    ],
+    "related": [
+      "damage",
+      "round-down",
+      "immunity",
+      "vulnerability"
+    ]
+  },
+  {
+    "id": "restrained",
+    "name": "Restrained",
+    "category": "Condition",
+    "icon": "fa-solid fa-link",
+    "aliases": [
+      "restrained condition",
+      "bound"
+    ],
+    "keywords": [
+      "speed 0",
+      "advantage",
+      "disadvantage",
+      "dexterity"
+    ],
+    "preview": "Your Speed is 0, attacks are affected, and Dexterity saves are harder.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Speed 0",
+        "body": "Your Speed is 0 and cannot increase."
+      },
+      {
+        "heading": "Attacks",
+        "body": "Attack rolls against you have Advantage, and your attack rolls have Disadvantage."
+      },
+      {
+        "heading": "Dexterity Saves",
+        "body": "You have Disadvantage on Dexterity saving throws."
+      }
+    ],
+    "related": [
+      "advantage",
+      "disadvantage"
+    ]
+  },
+  {
+    "id": "ritual",
+    "name": "Ritual",
+    "category": "Magic",
+    "icon": "fa-solid fa-book-skull",
+    "aliases": [
+      "ritual casting",
+      "ritual spell"
+    ],
+    "keywords": [
+      "10 minutes",
+      "spell slot",
+      "prepared"
+    ],
+    "preview": "A prepared spell with the Ritual tag can be cast without a spell slot by taking 10 extra minutes.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If you have a Ritual spell prepared, you can cast it as a Ritual. It takes 10 minutes longer, expends no spell slot, and therefore cannot be cast at a higher level by using a slot."
+      }
+    ],
+    "related": [
+      "spell-slots"
+    ]
+  },
+  {
+    "id": "round-down",
+    "name": "Round Down",
+    "category": "Core",
+    "icon": "fa-solid fa-divide",
+    "aliases": [
+      "rounding",
+      "round down",
+      "rounding numbers",
+      "fraction"
+    ],
+    "keywords": [
+      "math",
+      "fraction",
+      "half"
+    ],
+    "preview": "Fractions are normally rounded down.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Whenever a game rule has you multiply or divide and the result is a fraction, round down unless that rule specifically tells you to round up."
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "saving-throw",
+    "name": "Saving Throw",
+    "category": "D20 Test",
+    "icon": "fa-solid fa-shield",
+    "aliases": [
+      "save",
+      "saving throws",
+      "saves"
+    ],
+    "keywords": [
+      "d20",
+      "dc",
+      "resist",
+      "avoid"
+    ],
+    "preview": "A D20 Test made to avoid or resist a threat.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "When You Roll",
+        "body": "You normally make a saving throw only when a rule requires one. The effect tells you which ability to use and what success or failure means."
+      },
+      {
+        "heading": "Choosing to Fail",
+        "body": "You can choose to fail a saving throw without rolling unless another rule says otherwise."
+      },
+      {
+        "heading": "Missing Ability Score",
+        "body": "If a target is forced to make a save and lacks the required ability score, it automatically fails."
+      }
+    ],
+    "related": [
+      "d20-test",
+      "difficulty-class"
+    ]
+  },
+  {
+    "id": "search",
+    "name": "Search",
+    "category": "Action",
+    "icon": "fa-solid fa-magnifying-glass",
+    "aliases": [
+      "search action",
+      "look around",
+      "perception search"
+    ],
+    "keywords": [
+      "wisdom",
+      "perception",
+      "insight",
+      "medicine",
+      "survival"
+    ],
+    "preview": "Make a Wisdom check to notice something that isn't obvious.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "The Search action normally uses a Wisdom check. Common examples are Insight for a creature's state of mind, Medicine for an ailment or cause of death, Perception for concealed creatures or objects, and Survival for tracks or food."
+      }
+    ],
+    "related": [
+      "ability-check",
+      "passive-perception"
+    ]
+  },
+  {
+    "id": "shape-shifting",
+    "name": "Shape-Shifting",
+    "category": "Magic",
+    "icon": "fa-solid fa-wand-magic-sparkles",
+    "aliases": [
+      "shape shifting",
+      "shapeshift",
+      "wild shape rules",
+      "polymorph rules"
+    ],
+    "keywords": [
+      "conditions",
+      "spells",
+      "curses",
+      "true form"
+    ],
+    "preview": "A shape-shifting effect tells you what changes; ongoing effects normally carry over.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Unless the effect says otherwise, conditions, spells, curses, and other ongoing effects remain on you across forms. You revert to your true form if you die."
+      }
+    ],
+    "related": [
+      "condition"
+    ]
+  },
+  {
+    "id": "short-rest",
+    "name": "Short Rest",
+    "category": "Rest",
+    "icon": "fa-solid fa-mug-hot",
+    "aliases": [
+      "short rest rules",
+      "sr"
+    ],
+    "keywords": [
+      "1 hour",
+      "hit dice",
+      "healing"
+    ],
+    "preview": "A 1-hour downtime period that can restore Hit Points through Hit Point Dice and recharge some features.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Requirements",
+        "body": "A Short Rest lasts 1 hour and begins only if you have at least 1 Hit Point. During it, do nothing more strenuous than reading, talking, eating, or standing watch."
+      },
+      {
+        "heading": "Hit Point Dice",
+        "body": "At the end, spend any number of Hit Point Dice one at a time. Roll each die, add Constitution modifier, and regain at least 1 Hit Point from each die spent."
+      },
+      {
+        "heading": "Interrupted",
+        "body": "Rolling Initiative, casting a spell other than a cantrip, or taking damage interrupts the rest and grants no benefits."
+      }
+    ],
+    "related": [
+      "long-rest"
+    ]
+  },
+  {
+    "id": "simultaneous-effects",
+    "name": "Simultaneous Effects",
+    "category": "Core",
+    "icon": "fa-solid fa-code-branch",
+    "aliases": [
+      "same time effects",
+      "simultaneous triggers",
+      "order effects"
+    ],
+    "keywords": [
+      "timing",
+      "turn",
+      "trigger"
+    ],
+    "preview": "The creature or DM whose turn it is decides the order of simultaneous effects.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If two or more things happen at the same time on a turn, the player or DM controlling that turn decides the order in which those effects are resolved."
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "size",
+    "name": "Size",
+    "category": "Core",
+    "icon": "fa-solid fa-maximize",
+    "aliases": [
+      "size category",
+      "tiny small medium large huge gargantuan"
+    ],
+    "keywords": [
+      "space",
+      "creature",
+      "object"
+    ],
+    "preview": "Creatures and objects use size categories from Tiny through Gargantuan.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "The size categories are Tiny, Small, Medium, Large, Huge, and Gargantuan. Creature size affects occupied space and several other rules; object size can affect Hit Points."
+      }
+    ],
+    "related": [
+      "occupied-space",
+      "carrying-capacity"
+    ]
+  },
+  {
+    "id": "skill",
+    "name": "Skill",
+    "category": "D20 Test",
+    "icon": "fa-solid fa-list-check",
+    "aliases": [
+      "skills",
+      "skill proficiency"
+    ],
+    "keywords": [
+      "ability check",
+      "proficiency"
+    ],
+    "preview": "A specialization associated with an ability check.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A skill represents an area of specialization. If you have proficiency in the skill used for an ability check, you can add your Proficiency Bonus."
+      }
+    ],
+    "related": [
+      "ability-check",
+      "proficiency",
+      "expertise"
+    ]
+  },
+  {
+    "id": "somatic-component",
+    "name": "Somatic Component",
+    "category": "Magic",
+    "icon": "fa-solid fa-hand",
+    "aliases": [
+      "somatic",
+      "s component",
+      "somatic spell component"
+    ],
+    "keywords": [
+      "hand",
+      "gesture"
+    ],
+    "preview": "A Somatic component requires at least one hand to perform the spell's gestures.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A spellcaster must use at least one hand to perform a spell's Somatic component."
+      }
+    ],
+    "related": [
+      "spell-components"
+    ]
+  },
+  {
+    "id": "speed",
+    "name": "Speed",
+    "category": "Movement",
+    "icon": "fa-solid fa-person-walking",
+    "aliases": [
+      "movement speed",
+      "walk speed",
+      "movement"
+    ],
+    "keywords": [
+      "feet",
+      "move",
+      "climb",
+      "fly",
+      "swim"
+    ],
+    "preview": "Speed is the distance in feet a creature can cover when it moves on its turn.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Using Multiple Speeds",
+        "body": "If you have more than one speed, you can switch during a move. Subtract the distance already moved from the new speed to determine how much farther you can move."
+      },
+      {
+        "heading": "Changes Apply to Special Speeds",
+        "body": "A temporary increase or decrease to your Speed also changes your special speeds by the same amount unless a rule says otherwise."
+      }
+    ],
+    "related": [
+      "dash",
+      "difficult-terrain",
+      "climbing",
+      "swimming",
+      "flying"
+    ]
+  },
+  {
+    "id": "spell",
+    "name": "Spell",
+    "category": "Magic",
+    "icon": "fa-solid fa-wand-sparkles",
+    "aliases": [
+      "spells",
+      "spell rule"
+    ],
+    "keywords": [
+      "magic",
+      "casting",
+      "components",
+      "range",
+      "duration"
+    ],
+    "preview": "A spell is a magical effect defined by its spell description.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Spell descriptions specify level, school, casting time, range, components, duration, and effects. The general spellcasting rules explain how those entries work."
+      }
+    ],
+    "related": [
+      "spell-slots",
+      "spell-casting-time",
+      "spell-components"
+    ]
+  },
+  {
+    "id": "spell-attack",
+    "name": "Spell Attack",
+    "category": "Magic",
+    "icon": "fa-solid fa-wand-magic-sparkles",
+    "aliases": [
+      "spell attack roll"
+    ],
+    "keywords": [
+      "attack roll",
+      "magic"
+    ],
+    "preview": "A spell attack is an attack roll made as part of a spell or magical effect.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Resolve a spell attack as an attack roll, using the spell attack modifier provided by the relevant spellcasting rule."
+      }
+    ],
+    "related": [
+      "attack-roll",
+      "spell-attack-modifier"
+    ]
+  },
+  {
+    "id": "spell-attack-modifier",
+    "name": "Spell Attack Modifier",
+    "category": "Magic",
+    "icon": "fa-solid fa-crosshairs",
+    "aliases": [
+      "spell attack bonus",
+      "spell attack roll"
+    ],
+    "keywords": [
+      "spellcasting ability",
+      "proficiency"
+    ],
+    "preview": "Your spell attack modifier is spellcasting ability modifier + Proficiency Bonus.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "For a spell attack roll, add your spellcasting ability modifier and Proficiency Bonus unless a rule gives another formula."
+      }
+    ],
+    "related": [
+      "spell-attack",
+      "attack-roll"
+    ]
+  },
+  {
+    "id": "spell-casting-time",
+    "name": "Spell Casting Time",
+    "category": "Magic",
+    "icon": "fa-solid fa-clock",
+    "aliases": [
+      "casting time",
+      "spell action",
+      "long casting time"
+    ],
+    "keywords": [
+      "magic action",
+      "bonus action",
+      "reaction",
+      "concentration"
+    ],
+    "preview": "A spell's Casting Time tells you what action or amount of time is required to cast it.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Common Casting Times",
+        "body": "Most spells use the Magic action, but some use a Bonus Action, Reaction, or take 1 minute or longer."
+      },
+      {
+        "heading": "Long Casting Times",
+        "body": "For a casting time of 1 minute or longer, take the Magic action on each turn and maintain Concentration. If Concentration breaks, the spell fails without expending the spell slot."
+      }
+    ],
+    "related": [
+      "magic",
+      "concentration"
+    ]
+  },
+  {
+    "id": "spell-components",
+    "name": "Spell Components",
+    "category": "Magic",
+    "icon": "fa-solid fa-hands",
+    "aliases": [
+      "components",
+      "v s m",
+      "vsm",
+      "spell component"
+    ],
+    "keywords": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "preview": "A spell can require Verbal, Somatic, and Material components.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If you cannot provide every component a spell requires, you cannot cast it."
+      }
+    ],
+    "related": [
+      "verbal-component",
+      "somatic-component",
+      "material-component"
+    ]
+  },
+  {
+    "id": "spell-duration",
+    "name": "Spell Duration",
+    "category": "Magic",
+    "icon": "fa-solid fa-hourglass-half",
+    "aliases": [
+      "duration",
+      "spell duration",
+      "instantaneous"
+    ],
+    "keywords": [
+      "concentration",
+      "rounds",
+      "minutes",
+      "hours"
+    ],
+    "preview": "A spell's Duration tells you how long its magic persists.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Concentration",
+        "body": "A Concentration duration follows the Concentration rules."
+      },
+      {
+        "heading": "Instantaneous",
+        "body": "The magic exists only for a moment."
+      },
+      {
+        "heading": "Time Span",
+        "body": "A timed spell lasts for the listed period. While a timed spell you cast continues, you can dismiss it with no action unless you are Incapacitated."
+      }
+    ],
+    "related": [
+      "concentration"
+    ]
+  },
+  {
+    "id": "spell-range",
+    "name": "Spell Range",
+    "category": "Magic",
+    "icon": "fa-solid fa-ruler-horizontal",
+    "aliases": [
+      "spell range",
+      "touch spell",
+      "self range"
+    ],
+    "keywords": [
+      "feet",
+      "touch",
+      "self"
+    ],
+    "preview": "A spell's range limits where its effect can originate.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Distance",
+        "body": "A distance range is given in feet."
+      },
+      {
+        "heading": "Touch",
+        "body": "The spell's effect originates on something the caster must touch within their reach."
+      },
+      {
+        "heading": "Self",
+        "body": "The spell is cast on the caster or emanates from the caster."
+      },
+      {
+        "heading": "Movable Effects",
+        "body": "After creation, a movable spell effect is not limited by the spell's original range unless the spell says otherwise."
+      }
+    ],
+    "related": [
+      "area-of-effect"
+    ]
+  },
+  {
+    "id": "spell-save-dc",
+    "name": "Spell Save DC",
+    "category": "Magic",
+    "icon": "fa-solid fa-shield",
+    "aliases": [
+      "spell dc",
+      "spell saving throw dc"
+    ],
+    "keywords": [
+      "8",
+      "spellcasting ability",
+      "proficiency"
+    ],
+    "preview": "Your spell save DC is 8 + spellcasting ability modifier + Proficiency Bonus.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "When one of your spells calls for a saving throw, its standard save DC is 8 + your spellcasting ability modifier + your Proficiency Bonus unless a rule says otherwise."
+      }
+    ],
+    "related": [
+      "saving-throw"
+    ]
+  },
+  {
+    "id": "spell-slots",
+    "name": "Spell Slots",
+    "category": "Magic",
+    "icon": "fa-solid fa-battery-half",
+    "aliases": [
+      "spell slot",
+      "slots",
+      "upcast",
+      "higher level slot"
+    ],
+    "keywords": [
+      "spell",
+      "level",
+      "long rest"
+    ],
+    "preview": "Spell slots are expended to cast most level 1+ spells.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Using a Slot",
+        "body": "To cast a level 1+ spell with a spell slot, expend a slot of the spell's level or higher."
+      },
+      {
+        "heading": "Higher-Level Slot",
+        "body": "A spell cast using a higher-level slot counts as that higher level for that casting; some spells gain stronger effects as described in the spell."
+      },
+      {
+        "heading": "Recovery",
+        "body": "The standard spellcasting rules restore expended spell slots after a Long Rest, though class features can create exceptions."
+      }
+    ],
+    "related": [
+      "spell"
+    ]
+  },
+  {
+    "id": "spell-targets",
+    "name": "Spell Targets",
+    "category": "Magic",
+    "icon": "fa-solid fa-crosshairs",
+    "aliases": [
+      "spell targeting",
+      "clear path spell",
+      "target behind cover"
+    ],
+    "keywords": [
+      "total cover",
+      "self",
+      "invalid target"
+    ],
+    "preview": "A spell's description identifies what it can target.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Clear Path",
+        "body": "To target something with a spell, you need a clear path to it; a target behind Total Cover cannot normally be targeted."
+      },
+      {
+        "heading": "Target Yourself",
+        "body": "If a spell targets a creature of your choice, you can usually choose yourself unless it requires a Hostile creature or specifically another creature."
+      },
+      {
+        "heading": "Invalid Target",
+        "body": "If the chosen target cannot be affected, the spell has no effect on that target; a spell slot used to cast the spell is still expended."
+      }
+    ],
+    "related": [
+      "cover"
+    ]
+  },
+  {
+    "id": "spellcasting-focus",
+    "name": "Spellcasting Focus",
+    "category": "Magic",
+    "icon": "fa-solid fa-wand-sparkles",
+    "aliases": [
+      "focus",
+      "arcane focus",
+      "druidic focus",
+      "holy symbol"
+    ],
+    "keywords": [
+      "material component",
+      "spell"
+    ],
+    "preview": "An allowed focus can replace certain Material components.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A Spellcasting Focus can replace a spell's Material component when the material is not consumed and has no specified cost, if your spellcasting feature allows that kind of focus."
+      }
+    ],
+    "related": [
+      "material-component"
+    ]
+  },
+  {
+    "id": "sphere",
+    "name": "Sphere",
+    "category": "Area of Effect",
+    "icon": "fa-solid fa-circle",
+    "aliases": [
+      "sphere aoe",
+      "sphere area",
+      "radius"
+    ],
+    "keywords": [
+      "area of effect",
+      "origin"
+    ],
+    "preview": "A Sphere extends outward from its point of origin by a stated radius.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A Sphere extends equally in all directions from its origin, and the origin is included."
+      }
+    ],
+    "related": [
+      "area-of-effect"
+    ]
+  },
+  {
+    "id": "stable",
+    "name": "Stable",
+    "category": "Damage",
+    "icon": "fa-solid fa-heart-pulse",
+    "aliases": [
+      "stabilized",
+      "stabilise",
+      "stabilize"
+    ],
+    "keywords": [
+      "0 hp",
+      "death save"
+    ],
+    "preview": "A Stable creature has 0 Hit Points but is not making Death Saving Throws.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A creature is Stable when it has 0 Hit Points but is no longer required to make Death Saving Throws. It remains at 0 HP until healed or another rule changes its state."
+      }
+    ],
+    "related": [
+      "death-saving-throw",
+      "hit-points"
+    ]
+  },
+  {
+    "id": "stat-block",
+    "name": "Stat Block",
+    "category": "Core",
+    "icon": "fa-solid fa-table-list",
+    "aliases": [
+      "monster stat block",
+      "statblock"
+    ],
+    "keywords": [
+      "ac",
+      "initiative",
+      "hp",
+      "cr",
+      "actions"
+    ],
+    "preview": "A stat block presents the game statistics of a monster.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A monster stat block summarizes size, creature type, alignment, AC, Initiative, Hit Points, Speed, ability scores, saves, skills, defenses, senses, languages, Challenge Rating, traits, actions, Bonus Actions, Reactions, and attack/save notation as applicable."
+      }
+    ],
+    "related": []
+  },
+  {
+    "id": "study",
+    "name": "Study",
+    "category": "Action",
+    "icon": "fa-solid fa-book-open-reader",
+    "aliases": [
+      "study action",
+      "knowledge check",
+      "recall knowledge"
+    ],
+    "keywords": [
+      "intelligence",
+      "arcana",
+      "history",
+      "investigation",
+      "nature",
+      "religion"
+    ],
+    "preview": "Make an Intelligence check to recall or uncover information.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "The Study action uses an Intelligence check to examine memory, books, clues, or other knowledge sources. Arcana, History, Investigation, Nature, and Religion are common applicable skills."
+      }
+    ],
+    "related": [
+      "ability-check",
+      "skill"
+    ]
+  },
+  {
+    "id": "stunned",
+    "name": "Stunned",
+    "category": "Condition",
+    "icon": "fa-solid fa-star",
+    "aliases": [
+      "stunned condition",
+      "stun"
+    ],
+    "keywords": [
+      "incapacitated",
+      "advantage",
+      "saving throw"
+    ],
+    "preview": "You are Incapacitated, fail Strength and Dexterity saves, and attacks against you have Advantage.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Incapacitated",
+        "body": "You have the Incapacitated condition."
+      },
+      {
+        "heading": "Saves",
+        "body": "You automatically fail Strength and Dexterity saving throws."
+      },
+      {
+        "heading": "Attacks",
+        "body": "Attack rolls against you have Advantage."
+      }
+    ],
+    "related": [
+      "incapacitated",
+      "advantage"
+    ]
+  },
+  {
+    "id": "suffocation",
+    "name": "Suffocation",
+    "category": "Hazard",
+    "icon": "fa-solid fa-lungs",
+    "aliases": [
+      "hold breath",
+      "drowning",
+      "choking",
+      "suffocate"
+    ],
+    "keywords": [
+      "constitution",
+      "exhaustion",
+      "breath"
+    ],
+    "preview": "After you run out of breath, you gain Exhaustion each turn until you can breathe again.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "You can hold your breath for 1 + Constitution modifier minutes, with a minimum of 30 seconds. Once you run out of breath or begin choking, gain 1 Exhaustion level at the end of each turn. When you can breathe again, remove all Exhaustion gained from suffocating."
+      }
+    ],
+    "related": [
+      "exhaustion"
+    ]
+  },
+  {
+    "id": "surprise",
+    "name": "Surprise",
+    "category": "Combat",
+    "icon": "fa-solid fa-circle-exclamation",
+    "aliases": [
+      "surprised",
+      "surprise round"
+    ],
+    "keywords": [
+      "initiative",
+      "disadvantage"
+    ],
+    "preview": "A creature caught unaware at the start of combat has Disadvantage on Initiative.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If a creature is surprised when combat begins, it has Disadvantage on its Initiative roll."
+      }
+    ],
+    "related": [
+      "initiative",
+      "disadvantage"
+    ]
+  },
+  {
+    "id": "swim-speed",
+    "name": "Swim Speed",
+    "category": "Movement",
+    "icon": "fa-solid fa-water",
+    "aliases": [
+      "swimming speed"
+    ],
+    "keywords": [
+      "speed",
+      "swim"
+    ],
+    "preview": "A Swim Speed avoids the normal extra movement cost of swimming.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Use a Swim Speed to swim without the extra movement normally required."
+      }
+    ],
+    "related": [
+      "swimming",
+      "speed"
+    ]
+  },
+  {
+    "id": "swimming",
+    "name": "Swimming",
+    "category": "Movement",
+    "icon": "fa-solid fa-person-swimming",
+    "aliases": [
+      "swim",
+      "swimming rules"
+    ],
+    "keywords": [
+      "movement",
+      "athletics",
+      "water",
+      "dc 15"
+    ],
+    "preview": "Swimming normally costs extra movement unless you use a Swim Speed.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Each foot swum costs 1 extra foot, or 2 extra feet in Difficult Terrain. Rough water may require a DC 15 Strength (Athletics) check at the DM's option."
+      }
+    ],
+    "related": [
+      "swim-speed",
+      "difficult-terrain",
+      "speed"
+    ]
+  },
+  {
+    "id": "target",
+    "name": "Target",
+    "category": "Core",
+    "icon": "fa-solid fa-bullseye",
+    "aliases": [
+      "targets",
+      "targeting"
+    ],
+    "keywords": [
+      "attack roll",
+      "saving throw",
+      "spell",
+      "effect"
+    ],
+    "preview": "A target is the creature or object selected by an attack, save-based effect, spell, or other rule.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A target is a creature or object selected by an attack roll, forced to make a saving throw by an effect, or chosen to receive a spell or other phenomenon."
+      }
+    ],
+    "related": [
+      "attack-roll",
+      "saving-throw",
+      "spell-targets"
+    ]
+  },
+  {
+    "id": "telepathy",
+    "name": "Telepathy",
+    "category": "Senses",
+    "icon": "fa-solid fa-brain",
+    "aliases": [
+      "telepathic",
+      "mind speech"
+    ],
+    "keywords": [
+      "communication",
+      "range",
+      "incapacitated"
+    ],
+    "preview": "Telepathy allows mental communication within a specified range.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Unless a rule says otherwise, the target need not share a language but must understand at least one language or be telepathic. Incapacitation, leaving range, or contacting a different creature breaks the connection."
+      }
+    ],
+    "related": [
+      "incapacitated"
+    ]
+  },
+  {
+    "id": "teleportation",
+    "name": "Teleportation",
+    "category": "Movement",
+    "icon": "fa-solid fa-location-arrow",
+    "aliases": [
+      "teleport",
+      "misty step movement"
+    ],
+    "keywords": [
+      "instant",
+      "movement",
+      "opportunity attack",
+      "destination"
+    ],
+    "preview": "Teleportation moves you instantly without crossing the intervening space.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "No Movement Cost",
+        "body": "Teleportation does not expend movement unless its rule says otherwise and never provokes Opportunity Attacks."
+      },
+      {
+        "heading": "Gear",
+        "body": "Equipment you wear and carry teleports with you. Another creature does not come with you unless the effect says it does."
+      },
+      {
+        "heading": "Blocked Destination",
+        "body": "If the destination is occupied or blocked by a solid obstacle, appear in the nearest unoccupied space of your choice."
+      }
+    ],
+    "related": [
+      "opportunity-attacks",
+      "unoccupied-space"
+    ]
+  },
+  {
+    "id": "temporary-hit-points",
+    "name": "Temporary Hit Points",
+    "category": "Damage",
+    "icon": "fa-solid fa-shield-heart",
+    "aliases": [
+      "temp hp",
+      "thp",
+      "temporary hp"
+    ],
+    "keywords": [
+      "damage",
+      "buffer",
+      "hit points"
+    ],
+    "preview": "Temporary Hit Points absorb damage before your normal Hit Points.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Buffer",
+        "body": "When you have Temporary Hit Points and take damage, subtract the damage from the temporary pool first; excess damage carries over to normal Hit Points."
+      },
+      {
+        "heading": "No Stacking",
+        "body": "Temporary Hit Points from different sources do not add together unless a rule says otherwise; when you gain a new amount, choose whether to keep the old amount or take the new one."
+      },
+      {
+        "heading": "Not Healing",
+        "body": "Temporary Hit Points are not normal Hit Points and do not count as healing."
+      }
+    ],
+    "related": [
+      "hit-points",
+      "damage"
+    ]
+  },
+  {
+    "id": "thrown",
+    "name": "Thrown",
+    "category": "Weapon Property",
+    "icon": "fa-solid fa-baseball",
+    "aliases": [
+      "thrown property",
+      "throw weapon"
+    ],
+    "keywords": [
+      "ranged attack",
+      "draw weapon",
+      "ability modifier"
+    ],
+    "preview": "A Thrown weapon can be thrown to make a ranged attack.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "You can draw a Thrown weapon as part of the attack. If it is a Melee weapon, use the same ability modifier for the ranged attack and damage that you would use for a melee attack with it."
+      }
+    ],
+    "related": [
+      "ranged-attacks",
+      "weapon-range"
+    ]
+  },
+  {
+    "id": "tremorsense",
+    "name": "Tremorsense",
+    "category": "Vision",
+    "icon": "fa-solid fa-wave-square",
+    "aliases": [
+      "tremor sense"
+    ],
+    "keywords": [
+      "ground",
+      "surface",
+      "liquid",
+      "air"
+    ],
+    "preview": "Tremorsense pinpoints creatures and moving objects sharing the same surface or liquid.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Within its range, Tremorsense can pinpoint creatures and moving objects in contact with the same surface or liquid as you. It cannot detect things in the air and is not a form of sight."
+      }
+    ],
+    "related": [
+      "blindsight"
+    ]
+  },
+  {
+    "id": "truesight",
+    "name": "Truesight",
+    "category": "Vision",
+    "icon": "fa-solid fa-eye",
+    "aliases": [
+      "true sight"
+    ],
+    "keywords": [
+      "invisible",
+      "darkness",
+      "illusion",
+      "shapechange",
+      "ethereal"
+    ],
+    "preview": "Truesight pierces several kinds of visual deception within its range.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Within its range, Truesight sees through normal and magical Darkness, sees Invisible creatures and objects, recognizes visual illusions, discerns true forms of transformed creatures or objects, and sees into the Ethereal Plane."
+      }
+    ],
+    "related": [
+      "invisible",
+      "darkness",
+      "illusions"
+    ]
+  },
+  {
+    "id": "two-handed",
+    "name": "Two-Handed",
+    "category": "Weapon Property",
+    "icon": "fa-solid fa-hands",
+    "aliases": [
+      "two handed",
+      "2 handed",
+      "two-handed property"
+    ],
+    "keywords": [
+      "weapon",
+      "hands"
+    ],
+    "preview": "A Two-Handed weapon requires two hands when you attack with it.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "You need two hands to make an attack with a Two-Handed weapon."
+      }
+    ],
+    "related": [
+      "weapon"
     ]
   },
   {
@@ -378,43 +5081,353 @@
       "kick",
       "headbutt",
       "unarmed attack",
-      "unarmed attacks",
-      "fist"
+      "shove",
+      "grapple"
     ],
     "keywords": [
       "melee",
-      "attack",
       "damage",
       "grapple",
-      "shove",
-      "strength",
-      "proficiency",
-      "prone"
+      "prone",
+      "strength"
     ],
-    "preview": "Use your body in melee to deal damage, grapple a target, or shove it.",
-    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "preview": "Use your body in melee to deal damage, grapple, or shove.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
     "text": [
       {
-        "heading": "Unarmed Strike",
-        "body": "An Unarmed Strike is a melee attack using your body against a target within 5 feet. When you make one, choose Damage, Grapple, or Shove."
-      },
-      {
         "heading": "Damage",
-        "body": "Make an attack roll using your Strength modifier plus your Proficiency Bonus. On a hit, the target takes Bludgeoning damage equal to 1 plus your Strength modifier."
+        "body": "Make an attack roll using Strength + Proficiency Bonus. On a hit, deal Bludgeoning damage equal to 1 + your Strength modifier."
       },
       {
         "heading": "Grapple",
-        "body": "The target chooses a Strength or Dexterity saving throw. On a failure, it becomes Grappled. The save and escape DC equals 8 + your Strength modifier + your Proficiency Bonus. The target can be no more than one size larger than you, and you need a free hand."
+        "body": "The target makes a Strength or Dexterity save against DC 8 + your Strength modifier + Proficiency Bonus. On a failure it becomes Grappled. The target can be no more than one size larger, and you need a free hand."
       },
       {
         "heading": "Shove",
-        "body": "The target chooses a Strength or Dexterity saving throw against a DC of 8 + your Strength modifier + your Proficiency Bonus. On a failure, you either push it 5 feet away or give it the Prone condition. The target can be no more than one size larger than you."
+        "body": "The target makes a Strength or Dexterity save against DC 8 + your Strength modifier + Proficiency Bonus. On a failure, push it 5 feet away or give it the Prone condition. The target can be no more than one size larger."
       }
     ],
     "related": [
       "grappling",
       "grappled",
       "prone"
+    ]
+  },
+  {
+    "id": "unconscious",
+    "name": "Unconscious",
+    "category": "Condition",
+    "icon": "fa-solid fa-bed",
+    "aliases": [
+      "unconscious condition",
+      "knocked out"
+    ],
+    "keywords": [
+      "incapacitated",
+      "prone",
+      "critical hit",
+      "speed 0"
+    ],
+    "preview": "You are Incapacitated and Prone, drop what you hold, and nearby hits become Critical Hits.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "Inert",
+        "body": "You have the Incapacitated and Prone conditions and drop whatever you are holding. When Unconscious ends, you remain Prone."
+      },
+      {
+        "heading": "Speed and Saves",
+        "body": "Your Speed is 0 and cannot increase. You automatically fail Strength and Dexterity saving throws."
+      },
+      {
+        "heading": "Attacks",
+        "body": "Attack rolls against you have Advantage. Any attack that hits from within 5 feet is a Critical Hit."
+      },
+      {
+        "heading": "Unaware",
+        "body": "You are unaware of your surroundings."
+      }
+    ],
+    "related": [
+      "incapacitated",
+      "prone",
+      "critical-hit"
+    ]
+  },
+  {
+    "id": "unoccupied-space",
+    "name": "Unoccupied Space",
+    "category": "Core",
+    "icon": "fa-regular fa-square",
+    "aliases": [
+      "empty space",
+      "unoccupied square"
+    ],
+    "keywords": [
+      "space"
+    ],
+    "preview": "A space is unoccupied if it contains no creature and is not completely filled by objects.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A space counts as unoccupied when no creature is there and objects do not completely fill it."
+      }
+    ],
+    "related": [
+      "occupied-space"
+    ]
+  },
+  {
+    "id": "utilize",
+    "name": "Utilize",
+    "category": "Action",
+    "icon": "fa-solid fa-toolbox",
+    "aliases": [
+      "utilize action",
+      "use object",
+      "interact object"
+    ],
+    "keywords": [
+      "object",
+      "equipment",
+      "action"
+    ],
+    "preview": "Use an object when its use requires an action.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "You can often interact with an object as part of another activity, but when an object's rules require an action to use it, take the Utilize action."
+      }
+    ],
+    "related": [
+      "object"
+    ]
+  },
+  {
+    "id": "verbal-component",
+    "name": "Verbal Component",
+    "category": "Magic",
+    "icon": "fa-solid fa-comment",
+    "aliases": [
+      "verbal",
+      "v component",
+      "verbal spell component"
+    ],
+    "keywords": [
+      "speak",
+      "silence",
+      "gagged"
+    ],
+    "preview": "A Verbal component must be spoken in a normal speaking voice.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A spell with a Verbal component requires the caster to utter the component in a normal speaking voice. A gagged creature or a creature in magical silence cannot provide it."
+      }
+    ],
+    "related": [
+      "spell-components"
+    ]
+  },
+  {
+    "id": "versatile",
+    "name": "Versatile",
+    "category": "Weapon Property",
+    "icon": "fa-solid fa-hand",
+    "aliases": [
+      "versatile property",
+      "one or two hands"
+    ],
+    "keywords": [
+      "damage",
+      "two handed"
+    ],
+    "preview": "A Versatile weapon can be used one- or two-handed, with a larger damage die in two hands.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A Versatile weapon lists a parenthetical damage value. Use that value when making a melee attack with the weapon in two hands."
+      }
+    ],
+    "related": [
+      "weapon"
+    ]
+  },
+  {
+    "id": "vulnerability",
+    "name": "Vulnerability",
+    "category": "Damage",
+    "icon": "fa-solid fa-heart-crack",
+    "aliases": [
+      "damage vulnerability",
+      "vulnerable"
+    ],
+    "keywords": [
+      "double damage"
+    ],
+    "preview": "Vulnerability doubles damage of the specified type.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "If you have Vulnerability to a damage type, double that damage against you. Vulnerability applies only once to a single instance of damage."
+      }
+    ],
+    "related": [
+      "damage",
+      "resistance",
+      "immunity"
+    ]
+  },
+  {
+    "id": "weapon",
+    "name": "Weapon",
+    "category": "Equipment",
+    "icon": "fa-solid fa-sword",
+    "aliases": [
+      "weapons",
+      "weapon rules"
+    ],
+    "keywords": [
+      "simple",
+      "martial",
+      "melee",
+      "ranged",
+      "damage",
+      "property"
+    ],
+    "preview": "Weapons are Simple or Martial and are also classified as Melee or Ranged.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "A weapon's entry lists category, whether it is Melee or Ranged, damage, properties, mastery, weight, and cost."
+      }
+    ],
+    "related": [
+      "weapon-attack",
+      "weapon-proficiency"
+    ]
+  },
+  {
+    "id": "weapon-attack",
+    "name": "Weapon Attack",
+    "category": "Combat",
+    "icon": "fa-solid fa-sword",
+    "aliases": [
+      "weapon attacks"
+    ],
+    "keywords": [
+      "attack roll",
+      "weapon"
+    ],
+    "preview": "A weapon attack is an attack roll made with a weapon.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Resolve a weapon attack as an attack roll and apply proficiency and the weapon's relevant ability modifier as directed by the weapon rules."
+      }
+    ],
+    "related": [
+      "attack-roll",
+      "weapon"
+    ]
+  },
+  {
+    "id": "weapon-proficiency",
+    "name": "Weapon Proficiency",
+    "category": "Equipment",
+    "icon": "fa-solid fa-medal",
+    "aliases": [
+      "proficient weapon",
+      "weapon proficiency bonus"
+    ],
+    "keywords": [
+      "attack roll",
+      "proficiency"
+    ],
+    "preview": "Proficiency with a weapon lets you add your Proficiency Bonus to attack rolls made with it.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "Anyone can wield a weapon, but you add your Proficiency Bonus to an attack roll with it only if you are proficient with that weapon."
+      }
+    ],
+    "related": [
+      "proficiency",
+      "weapon"
+    ]
+  },
+  {
+    "id": "weapon-property-reach",
+    "name": "Weapon Property: Reach",
+    "category": "Weapon Property",
+    "icon": "fa-solid fa-arrows-left-right",
+    "aliases": [
+      "reach weapon",
+      "reach property",
+      "weapon reach"
+    ],
+    "keywords": [
+      "5 feet",
+      "opportunity attack"
+    ],
+    "preview": "A Reach weapon adds 5 feet to your reach for attacks and Opportunity Attacks with it.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": null,
+        "body": "When attacking with a Reach weapon, add 5 feet to your reach. Use that increased reach when determining Opportunity Attacks with that weapon."
+      }
+    ],
+    "related": [
+      "reach",
+      "opportunity-attacks"
+    ]
+  },
+  {
+    "id": "weapon-range",
+    "name": "Weapon Range",
+    "category": "Equipment",
+    "icon": "fa-solid fa-ruler-horizontal",
+    "aliases": [
+      "range 80/320",
+      "80/320",
+      "normal range",
+      "long range",
+      "weapon range numbers",
+      "what do range numbers mean"
+    ],
+    "keywords": [
+      "range",
+      "disadvantage",
+      "feet"
+    ],
+    "preview": "Two numbers such as 80/320 mean normal range / long range in feet.",
+    "source": "2024 Basic Rules / SRD 5.2.1",
+    "text": [
+      {
+        "heading": "First Number",
+        "body": "The first number is normal range. Attacks at or within it are made normally unless another rule applies."
+      },
+      {
+        "heading": "Second Number",
+        "body": "The second number is long range. Attacks beyond normal range but at or within long range have Disadvantage."
+      },
+      {
+        "heading": "Beyond Long Range",
+        "body": "You cannot attack a target beyond the weapon's long range."
+      }
+    ],
+    "related": [
+      "ranged-attacks",
+      "disadvantage"
     ]
   }
 ]
