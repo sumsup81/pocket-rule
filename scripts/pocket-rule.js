@@ -1,7 +1,7 @@
 /**
  * Pocket Rule
  * Main module initialization, ApplicationV2 window,
- * search integration, and Foundry toolbar integration.
+ * search integration, rule viewer, and toolbar integration.
  */
 
 import {
@@ -9,8 +9,22 @@ import {
 } from "./rule-search.js";
 
 
+import {
+  getRuleById,
+  prepareRuleView
+} from "./rule-viewer.js";
+
+
 const MODULE_ID =
   "pocket-rule";
+
+
+const SEARCH_TEMPLATE =
+  "modules/pocket-rule/templates/search.hbs";
+
+
+const VIEWER_TEMPLATE =
+  "modules/pocket-rule/templates/rule-viewer.hbs";
 
 
 const {
@@ -28,6 +42,7 @@ class PocketRuleApplication
     ApplicationV2
   ) {
 
+
   static DEFAULT_OPTIONS = {
 
     id:
@@ -43,7 +58,7 @@ class PocketRuleApplication
 
     position: {
       width: 430,
-      height: 270
+      height: 310
     },
 
     window: {
@@ -59,9 +74,76 @@ class PocketRuleApplication
 
     main: {
       template:
-        "modules/pocket-rule/templates/search.hbs"
+        SEARCH_TEMPLATE
     }
   };
+
+
+  constructor(options = {}) {
+
+    super(options);
+
+    /*
+     * null means we are viewing the search screen.
+     *
+     * A rule object means we are viewing that rule.
+     */
+
+    this.selectedRule = null;
+
+    this.searchController = null;
+  }
+
+
+  /* ---------------------------------------------------------- */
+  /*  CHOOSE TEMPLATE                                           */
+  /* ---------------------------------------------------------- */
+
+  _configureRenderParts(options) {
+
+    const parts =
+      super._configureRenderParts(options);
+
+
+    if (parts.main) {
+
+      parts.main.template =
+        this.selectedRule
+          ? VIEWER_TEMPLATE
+          : SEARCH_TEMPLATE;
+    }
+
+
+    return parts;
+  }
+
+
+  /* ---------------------------------------------------------- */
+  /*  PREPARE DATA                                              */
+  /* ---------------------------------------------------------- */
+
+  async _prepareContext(options) {
+
+    const context =
+      await super._prepareContext(options);
+
+
+    if (!this.selectedRule) {
+      return context;
+    }
+
+
+    const viewerContext =
+      prepareRuleView(
+        this.selectedRule
+      );
+
+
+    return {
+      ...context,
+      ...viewerContext
+    };
+  }
 
 
   /* ---------------------------------------------------------- */
@@ -79,6 +161,32 @@ class PocketRuleApplication
     );
 
 
+    /*
+     * If a rule is selected, activate viewer controls.
+     */
+
+    if (this.selectedRule) {
+
+      this._activateRuleViewer();
+
+      return;
+    }
+
+
+    /*
+     * Otherwise activate search.
+     */
+
+    this._activateSearch();
+  }
+
+
+  /* ---------------------------------------------------------- */
+  /*  ACTIVATE SEARCH                                           */
+  /* ---------------------------------------------------------- */
+
+  _activateSearch() {
+
     const input =
       this.element.querySelector(
         "#pocket-rule-search-input"
@@ -91,10 +199,10 @@ class PocketRuleApplication
       );
 
 
-    /*
-     * Connect the visible search box to our
-     * search engine.
-     */
+    if (!input || !results) {
+      return;
+    }
+
 
     this.searchController =
       new PocketRuleSearch({
@@ -105,47 +213,111 @@ class PocketRuleApplication
 
         onSelect:
           rule =>
-            this._onRuleSelected(rule)
+            this._openRule(rule)
       });
 
 
     this.searchController.activate();
 
 
-    /*
-     * Put the cursor directly in the search box.
-     */
+    requestAnimationFrame(
+      () => input.focus()
+    );
+  }
 
-    if (input) {
 
-      requestAnimationFrame(
-        () => input.focus()
+  /* ---------------------------------------------------------- */
+  /*  ACTIVATE RULE VIEWER                                      */
+  /* ---------------------------------------------------------- */
+
+  _activateRuleViewer() {
+
+    const backButton =
+      this.element.querySelector(
+        "[data-pocket-rule-back]"
+      );
+
+
+    if (backButton) {
+
+      backButton.addEventListener(
+        "click",
+        () => this._backToSearch()
+      );
+    }
+
+
+    const relatedButtons =
+      this.element.querySelectorAll(
+        "[data-pocket-rule-related]"
+      );
+
+
+    for (
+      const button
+      of relatedButtons
+    ) {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          const ruleId =
+            button.dataset
+              .pocketRuleRelated;
+
+
+          const rule =
+            getRuleById(ruleId);
+
+
+          if (rule) {
+            this._openRule(rule);
+          }
+        }
       );
     }
   }
 
 
   /* ---------------------------------------------------------- */
-  /*  RULE SELECTED                                             */
+  /*  OPEN RULE                                                 */
   /* ---------------------------------------------------------- */
 
-  _onRuleSelected(rule) {
+  _openRule(rule) {
 
-    /*
-     * Temporary test.
-     *
-     * The next development step will replace this
-     * notification with the real rule viewer.
-     */
+    if (!rule) {
+      return;
+    }
 
-    ui.notifications.info(
-      `${rule.name} selected`
-    );
 
-    console.log(
-      "Pocket Rule | Rule selected:",
-      rule
-    );
+    this.selectedRule =
+      rule;
+
+
+    this.render({
+      parts: [
+        "main"
+      ]
+    });
+  }
+
+
+  /* ---------------------------------------------------------- */
+  /*  BACK TO SEARCH                                            */
+  /* ---------------------------------------------------------- */
+
+  _backToSearch() {
+
+    this.selectedRule =
+      null;
+
+
+    this.render({
+      parts: [
+        "main"
+      ]
+    });
   }
 }
 
@@ -171,32 +343,13 @@ function openPocketRule() {
   }
 
 
-  /*
-   * Pocket Rule is already open.
-   */
-
   if (pocketRuleApp.rendered) {
 
     pocketRuleApp.bringToFront();
 
-
-    const input =
-      pocketRuleApp.element.querySelector(
-        "#pocket-rule-search-input"
-      );
-
-
-    if (input) {
-      input.focus();
-    }
-
     return;
   }
 
-
-  /*
-   * Open Pocket Rule.
-   */
 
   pocketRuleApp.render({
     force: true
@@ -258,11 +411,6 @@ Hooks.on(
       visible:
         true,
 
-
-      /*
-       * Clicking the book itself opens
-       * Pocket Rule.
-       */
 
       onChange:
         (_event, active) => {
