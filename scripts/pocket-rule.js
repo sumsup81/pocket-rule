@@ -1,10 +1,17 @@
 /**
  * Pocket Rule
  * Main module initialization, ApplicationV2 window,
- * and Foundry toolbar integration.
+ * search integration, and Foundry toolbar integration.
  */
 
-const MODULE_ID = "pocket-rule";
+import {
+  PocketRuleSearch
+} from "./rule-search.js";
+
+
+const MODULE_ID =
+  "pocket-rule";
+
 
 const {
   ApplicationV2,
@@ -16,17 +23,23 @@ const {
 /*  Pocket Rule Application                                     */
 /* ------------------------------------------------------------ */
 
-class PocketRuleApplication extends HandlebarsApplicationMixin(ApplicationV2) {
+class PocketRuleApplication
+  extends HandlebarsApplicationMixin(
+    ApplicationV2
+  ) {
 
   static DEFAULT_OPTIONS = {
-    id: "pocket-rule-window",
+
+    id:
+      "pocket-rule-window",
 
     classes: [
       "pocket-rule-app",
       "theme-dark"
     ],
 
-    tag: "div",
+    tag:
+      "div",
 
     position: {
       width: 430,
@@ -43,25 +56,96 @@ class PocketRuleApplication extends HandlebarsApplicationMixin(ApplicationV2) {
 
 
   static PARTS = {
+
     main: {
-      template: "modules/pocket-rule/templates/search.hbs"
+      template:
+        "modules/pocket-rule/templates/search.hbs"
     }
   };
 
 
-  /**
-   * Focus the search field whenever Pocket Rule is rendered.
-   */
-  _onRender(context, options) {
-    super._onRender(context, options);
+  /* ---------------------------------------------------------- */
+  /*  RENDER                                                    */
+  /* ---------------------------------------------------------- */
 
-    const input = this.element.querySelector(
-      "#pocket-rule-search-input"
+  _onRender(
+    context,
+    options
+  ) {
+
+    super._onRender(
+      context,
+      options
     );
 
+
+    const input =
+      this.element.querySelector(
+        "#pocket-rule-search-input"
+      );
+
+
+    const results =
+      this.element.querySelector(
+        "[data-pocket-rule-results]"
+      );
+
+
+    /*
+     * Connect the visible search box to our
+     * search engine.
+     */
+
+    this.searchController =
+      new PocketRuleSearch({
+
+        input,
+
+        results,
+
+        onSelect:
+          rule =>
+            this._onRuleSelected(rule)
+      });
+
+
+    this.searchController.activate();
+
+
+    /*
+     * Put the cursor directly in the search box.
+     */
+
     if (input) {
-      requestAnimationFrame(() => input.focus());
+
+      requestAnimationFrame(
+        () => input.focus()
+      );
     }
+  }
+
+
+  /* ---------------------------------------------------------- */
+  /*  RULE SELECTED                                             */
+  /* ---------------------------------------------------------- */
+
+  _onRuleSelected(rule) {
+
+    /*
+     * Temporary test.
+     *
+     * The next development step will replace this
+     * notification with the real rule viewer.
+     */
+
+    ui.notifications.info(
+      `${rule.name} selected`
+    );
+
+    console.log(
+      "Pocket Rule | Rule selected:",
+      rule
+    );
   }
 }
 
@@ -70,7 +154,8 @@ class PocketRuleApplication extends HandlebarsApplicationMixin(ApplicationV2) {
 /*  Application Instance                                        */
 /* ------------------------------------------------------------ */
 
-let pocketRuleApp = null;
+let pocketRuleApp =
+  null;
 
 
 /* ------------------------------------------------------------ */
@@ -80,25 +165,38 @@ let pocketRuleApp = null;
 function openPocketRule() {
 
   if (!pocketRuleApp) {
-    pocketRuleApp = new PocketRuleApplication();
+
+    pocketRuleApp =
+      new PocketRuleApplication();
   }
 
+
   /*
-   * If Pocket Rule is already open, don't create another copy.
-   * Bring the existing window to the front instead.
+   * Pocket Rule is already open.
    */
+
   if (pocketRuleApp.rendered) {
 
     pocketRuleApp.bringToFront();
 
-    const input = pocketRuleApp.element.querySelector(
-      "#pocket-rule-search-input"
-    );
 
-    if (input) input.focus();
+    const input =
+      pocketRuleApp.element.querySelector(
+        "#pocket-rule-search-input"
+      );
+
+
+    if (input) {
+      input.focus();
+    }
 
     return;
   }
+
+
+  /*
+   * Open Pocket Rule.
+   */
 
   pocketRuleApp.render({
     force: true
@@ -110,47 +208,71 @@ function openPocketRule() {
 /*  Module Initialization                                       */
 /* ------------------------------------------------------------ */
 
-Hooks.once("init", () => {
+Hooks.once(
+  "init",
+  () => {
 
-  console.log("Pocket Rule | Initializing");
+    console.log(
+      "Pocket Rule | Initializing"
+    );
 
-  const module = game.modules.get(MODULE_ID);
 
-  if (module) {
-    module.api = {
-      open: openPocketRule
-    };
+    const module =
+      game.modules.get(
+        MODULE_ID
+      );
+
+
+    if (module) {
+
+      module.api = {
+        open: openPocketRule
+      };
+    }
   }
-});
+);
 
 
 /* ------------------------------------------------------------ */
 /*  Scene Controls                                              */
 /* ------------------------------------------------------------ */
 
-Hooks.on("getSceneControlButtons", (controls) => {
+Hooks.on(
+  "getSceneControlButtons",
+  controls => {
 
-  controls["pocket-rule"] = {
+    controls["pocket-rule"] = {
 
-    name: "pocket-rule",
+      name:
+        "pocket-rule",
 
-    title: "Pocket Rule",
+      title:
+        "Pocket Rule",
 
-    icon: "fa-solid fa-book-open",
+      icon:
+        "fa-solid fa-book-open",
 
-    order: 90,
+      order:
+        90,
 
-    visible: true,
+      visible:
+        true,
 
-    /*
-     * Clicking the book itself opens Pocket Rule.
-     * No secondary toolbar is required.
-     */
-    onChange: (_event, active) => {
 
-      if (!active) return;
+      /*
+       * Clicking the book itself opens
+       * Pocket Rule.
+       */
 
-      openPocketRule();
-    }
-  };
-});
+      onChange:
+        (_event, active) => {
+
+          if (!active) {
+            return;
+          }
+
+          openPocketRule();
+        }
+    };
+  }
+);
