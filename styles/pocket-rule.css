@@ -636,3 +636,37 @@
 .pocket-rule-results::-webkit-scrollbar-thumb:hover {
   background: var(--pr-border-light);
 }
+/* ============================================================ */
+/*  RULE TEXT SECTIONS                                          */
+/* ============================================================ */
+
+.pocket-rule-text-block {
+  margin: 0 0 12px 0;
+}
+
+
+.pocket-rule-text-block:last-child {
+  margin-bottom: 0;
+}
+
+
+.pocket-rule-text-heading {
+  margin: 0 0 4px 0;
+
+  color: var(--pr-text);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+.pocket-rule-text-block p {
+  margin: 0;
+
+  color: var(--pr-text);
+
+  font-size: 13px;
+  line-height: 1.5;
+}
