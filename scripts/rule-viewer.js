@@ -1,11 +1,9 @@
 /**
  * Pocket Rule
  * Rule viewer helpers
+ *
+ * Rule data is supplied by rules-glossary.json.
  */
-
-import {
-  SAMPLE_RULES
-} from "./rule-search.js";
 
 
 /* ------------------------------------------------------------ */
@@ -14,20 +12,23 @@ import {
 
 export function getRuleById(
   id,
-  rules = SAMPLE_RULES
+  rules = []
 ) {
 
   return rules.find(
-    rule => rule.id === id
+    rule =>
+      rule.id === id
   ) ?? null;
 }
 
 
 /* ------------------------------------------------------------ */
-/*  SIMPLE TERM NORMALIZATION                                   */
+/*  NORMALIZE TERM                                              */
 /* ------------------------------------------------------------ */
 
-function normalizeTerm(value = "") {
+function normalizeTerm(
+  value = ""
+) {
 
   return String(value)
     .toLowerCase()
@@ -37,15 +38,11 @@ function normalizeTerm(value = "") {
 
 /* ------------------------------------------------------------ */
 /*  INFER RELATED RULES                                         */
-/*                                                              */
-/*  Our final SRD database will contain deliberate related-rule */
-/*  links. For our test data, this can infer sensible links by  */
-/*  comparing keywords.                                        */
 /* ------------------------------------------------------------ */
 
 function inferRelatedRules(
   rule,
-  rules = SAMPLE_RULES,
+  rules = [],
   limit = 3
 ) {
 
@@ -54,53 +51,70 @@ function inferRelatedRules(
       [
         ...(rule.keywords ?? []),
         ...(rule.aliases ?? [])
-      ].map(normalizeTerm)
+      ].map(
+        normalizeTerm
+      )
     );
 
 
   return rules
     .filter(
       candidate =>
-        candidate.id !== rule.id
+        candidate.id !==
+        rule.id
     )
     .map(candidate => {
 
       const candidateTerms = [
         ...(candidate.keywords ?? []),
         ...(candidate.aliases ?? [])
-      ].map(normalizeTerm);
+      ].map(
+        normalizeTerm
+      );
 
 
-      let score = 0;
+      let score =
+        0;
 
 
-      for (const term of candidateTerms) {
+      for (
+        const term
+        of candidateTerms
+      ) {
 
-        if (sourceTerms.has(term)) {
+        if (
+          sourceTerms.has(term)
+        ) {
+
           score += 2;
         }
       }
 
 
-      /*
-       * Give a small bonus when the name of one rule
-       * appears among another rule's keywords/aliases.
-       */
-
       const ruleName =
-        normalizeTerm(rule.name);
+        normalizeTerm(
+          rule.name
+        );
+
 
       const candidateName =
-        normalizeTerm(candidate.name);
+        normalizeTerm(
+          candidate.name
+        );
 
 
       if (
         candidateTerms.some(
           term =>
-            term.includes(ruleName) ||
-            ruleName.includes(term)
+            term.includes(
+              ruleName
+            ) ||
+            ruleName.includes(
+              term
+            )
         )
       ) {
+
         score += 1;
       }
 
@@ -108,16 +122,23 @@ function inferRelatedRules(
       if (
         [...sourceTerms].some(
           term =>
-            term.includes(candidateName) ||
-            candidateName.includes(term)
+            term.includes(
+              candidateName
+            ) ||
+            candidateName.includes(
+              term
+            )
         )
       ) {
+
         score += 1;
       }
 
 
       return {
-        rule: candidate,
+        rule:
+          candidate,
+
         score
       };
     })
@@ -128,18 +149,32 @@ function inferRelatedRules(
     .sort(
       (a, b) => {
 
-        if (b.score !== a.score) {
-          return b.score - a.score;
+        if (
+          b.score !==
+          a.score
+        ) {
+
+          return (
+            b.score -
+            a.score
+          );
         }
 
-        return a.rule.name.localeCompare(
-          b.rule.name
+
+        return (
+          a.rule.name.localeCompare(
+            b.rule.name
+          )
         );
       }
     )
-    .slice(0, limit)
+    .slice(
+      0,
+      limit
+    )
     .map(
-      result => result.rule
+      result =>
+        result.rule
     );
 }
 
@@ -150,7 +185,7 @@ function inferRelatedRules(
 
 export function prepareRuleView(
   rule,
-  rules = SAMPLE_RULES
+  rules = []
 ) {
 
   if (!rule) {
@@ -158,28 +193,32 @@ export function prepareRuleView(
   }
 
 
-  /*
-   * Eventually official glossary entries can contain
-   * several paragraphs.
-   *
-   * For now our sample data only has "preview", so this
-   * gracefully uses that as the body text.
-   */
+  let paragraphs =
+    [];
 
-  let paragraphs = [];
 
-  if (Array.isArray(rule.text)) {
+  if (
+    Array.isArray(
+      rule.text
+    )
+  ) {
 
     paragraphs =
-      rule.text.filter(Boolean);
+      rule.text.filter(
+        Boolean
+      );
 
-  } else if (rule.text) {
+  } else if (
+    rule.text
+  ) {
 
     paragraphs = [
       rule.text
     ];
 
-  } else if (rule.preview) {
+  } else if (
+    rule.preview
+  ) {
 
     paragraphs = [
       rule.preview
@@ -187,16 +226,14 @@ export function prepareRuleView(
   }
 
 
-  /*
-   * Prefer deliberate related-rule IDs when supplied.
-   * Otherwise infer a few relationships from keywords.
-   */
-
-  let relatedRules = [];
+  let relatedRules =
+    [];
 
 
   if (
-    Array.isArray(rule.related) &&
+    Array.isArray(
+      rule.related
+    ) &&
     rule.related.length
   ) {
 
@@ -204,7 +241,10 @@ export function prepareRuleView(
       rule.related
         .map(
           id =>
-            getRuleById(id, rules)
+            getRuleById(
+              id,
+              rules
+            )
         )
         .filter(Boolean);
 
