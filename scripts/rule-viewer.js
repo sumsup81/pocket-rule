@@ -73,8 +73,7 @@ function inferRelatedRules(
       );
 
 
-      let score =
-        0;
+      let score = 0;
 
 
       for (
@@ -106,12 +105,8 @@ function inferRelatedRules(
       if (
         candidateTerms.some(
           term =>
-            term.includes(
-              ruleName
-            ) ||
-            ruleName.includes(
-              term
-            )
+            term.includes(ruleName) ||
+            ruleName.includes(term)
         )
       ) {
 
@@ -122,12 +117,8 @@ function inferRelatedRules(
       if (
         [...sourceTerms].some(
           term =>
-            term.includes(
-              candidateName
-            ) ||
-            candidateName.includes(
-              term
-            )
+            term.includes(candidateName) ||
+            candidateName.includes(term)
         )
       ) {
 
@@ -136,9 +127,7 @@ function inferRelatedRules(
 
 
       return {
-        rule:
-          candidate,
-
+        rule: candidate,
         score
       };
     })
@@ -180,6 +169,139 @@ function inferRelatedRules(
 
 
 /* ------------------------------------------------------------ */
+/*  PREPARE TEXT BLOCKS                                         */
+/* ------------------------------------------------------------ */
+
+/**
+ * Pocket Rule supports two rule-text formats.
+ *
+ * OLD:
+ *
+ * "text": "Some rule text."
+ *
+ * or:
+ *
+ * "text": [
+ *   "Paragraph one.",
+ *   "Paragraph two."
+ * ]
+ *
+ *
+ * NEW:
+ *
+ * "text": [
+ *   {
+ *     "heading": "Speed 0",
+ *     "body": "Your Speed is 0."
+ *   }
+ * ]
+ *
+ *
+ * Everything gets converted into the same viewer format.
+ */
+
+function prepareTextBlocks(
+  rule
+) {
+
+  const text =
+    rule.text;
+
+
+  if (!text) {
+
+    if (rule.preview) {
+
+      return [
+        {
+          heading: null,
+          body: rule.preview
+        }
+      ];
+    }
+
+    return [];
+  }
+
+
+  /* One plain string */
+
+  if (
+    typeof text ===
+    "string"
+  ) {
+
+    return [
+      {
+        heading: null,
+        body: text
+      }
+    ];
+  }
+
+
+  /* Array */
+
+  if (
+    Array.isArray(text)
+  ) {
+
+    return text
+      .map(item => {
+
+        /*
+         * Old paragraph format.
+         */
+
+        if (
+          typeof item ===
+          "string"
+        ) {
+
+          return {
+            heading: null,
+            body: item
+          };
+        }
+
+
+        /*
+         * New section format.
+         */
+
+        if (
+          item &&
+          typeof item ===
+          "object"
+        ) {
+
+          return {
+            heading:
+              item.heading ??
+              null,
+
+            body:
+              item.body ??
+              ""
+          };
+        }
+
+
+        return null;
+      })
+      .filter(
+        block =>
+          block &&
+          block.body
+      );
+  }
+
+
+  return [];
+}
+
+
+/* ------------------------------------------------------------ */
 /*  PREPARE VIEWER DATA                                         */
 /* ------------------------------------------------------------ */
 
@@ -193,37 +315,10 @@ export function prepareRuleView(
   }
 
 
-  let paragraphs =
-    [];
-
-
-  if (
-    Array.isArray(
-      rule.text
-    )
-  ) {
-
-    paragraphs =
-      rule.text.filter(
-        Boolean
-      );
-
-  } else if (
-    rule.text
-  ) {
-
-    paragraphs = [
-      rule.text
-    ];
-
-  } else if (
-    rule.preview
-  ) {
-
-    paragraphs = [
-      rule.preview
-    ];
-  }
+  const textBlocks =
+    prepareTextBlocks(
+      rule
+    );
 
 
   let relatedRules =
@@ -263,12 +358,12 @@ export function prepareRuleView(
 
     rule,
 
-    paragraphs,
+    textBlocks,
 
     relatedRules,
 
     source:
       rule.source ??
-      "Pocket Rule test data"
+      "Pocket Rule"
   };
 }
