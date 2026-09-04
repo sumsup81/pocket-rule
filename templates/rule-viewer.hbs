@@ -1,1 +1,115 @@
-view
+<div
+  class="pocket-rule pocket-rule-viewer"
+  data-pocket-rule-view
+>
+
+  <div class="pocket-rule-viewer-toolbar">
+
+    <button
+      type="button"
+      class="pocket-rule-back"
+      data-pocket-rule-back
+    >
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Back</span>
+    </button>
+
+    <span class="pocket-rule-view-source">
+      {{source}}
+    </span>
+
+  </div>
+
+
+  <div class="pocket-rule-rule-scroll">
+
+    <header class="pocket-rule-rule-header">
+
+      <div class="pocket-rule-rule-icon">
+        <i class="{{rule.icon}}"></i>
+      </div>
+
+
+      <div class="pocket-rule-rule-heading">
+
+        <div class="pocket-rule-rule-title">
+          {{rule.name}}
+        </div>
+
+        <div class="pocket-rule-rule-category">
+          {{rule.category}}
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <div class="pocket-rule-rule-body">
+
+      {{#each paragraphs}}
+
+        <p>
+          {{this}}
+        </p>
+
+      {{/each}}
+
+    </div>
+
+
+    {{#if relatedRules.length}}
+
+      <section class="pocket-rule-related">
+
+        <div class="pocket-rule-related-title">
+          Related Rules
+        </div>
+
+
+        <div class="pocket-rule-related-list">
+
+          {{#each relatedRules}}
+
+            <button
+              type="button"
+              class="pocket-rule-related-rule"
+              data-pocket-rule-related="{{id}}"
+            >
+
+              <i class="{{icon}}"></i>
+
+              <span>
+                {{name}}
+              </span>
+
+            </button>
+
+          {{/each}}
+
+        </div>
+
+      </section>
+
+    {{/if}}
+
+  </div>
+
+
+  <div class="pocket-rule-footer">
+
+    <span>
+      Pocket Rule
+    </span>
+
+    <span class="pocket-rule-footer-separator">
+      •
+    </span>
+
+    <span>
+      Rules Reference
+    </span>
+
+  </div>
+
+</div>
