@@ -47,11 +47,23 @@
 
     <div class="pocket-rule-rule-body">
 
-      {{#each paragraphs}}
+      {{#each textBlocks}}
 
-        <p>
-          {{this}}
-        </p>
+        <section class="pocket-rule-text-block">
+
+          {{#if heading}}
+
+            <div class="pocket-rule-text-heading">
+              {{heading}}
+            </div>
+
+          {{/if}}
+
+          <p>
+            {{body}}
+          </p>
+
+        </section>
 
       {{/each}}
 
