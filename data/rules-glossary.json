@@ -1,62 +1,5 @@
 [
   {
-    "id": "grappled",
-    "name": "Grappled",
-    "category": "Condition",
-    "icon": "fa-solid fa-hand",
-    "aliases": [
-      "grapple",
-      "grappling"
-    ],
-    "keywords": [
-      "movement",
-      "speed",
-      "condition",
-      "grab"
-    ],
-    "preview": "A condition associated with grappling and movement.",
-    "text": "A temporary Pocket Rule test entry for the Grappled condition.",
-    "related": [
-      "unarmed-strike"
-    ]
-  },
-  {
-    "id": "concentration",
-    "name": "Concentration",
-    "category": "Magic",
-    "icon": "fa-solid fa-brain",
-    "aliases": [
-      "concentrating",
-      "spell concentration"
-    ],
-    "keywords": [
-      "spell",
-      "magic",
-      "saving throw"
-    ],
-    "preview": "Rules for maintaining certain spells and magical effects.",
-    "text": "A temporary Pocket Rule test entry for Concentration."
-  },
-  {
-    "id": "opportunity-attack",
-    "name": "Opportunity Attack",
-    "category": "Combat",
-    "icon": "fa-solid fa-crosshairs",
-    "aliases": [
-      "attack of opportunity",
-      "opportunity attacks",
-      "reaction attack"
-    ],
-    "keywords": [
-      "reaction",
-      "combat",
-      "movement",
-      "melee"
-    ],
-    "preview": "A reaction associated with an enemy moving away from you.",
-    "text": "A temporary Pocket Rule test entry for Opportunity Attacks."
-  },
-  {
     "id": "ability-check",
     "name": "Ability Check",
     "category": "D20 Test",
@@ -64,34 +7,75 @@
     "aliases": [
       "skill check",
       "ability checks",
-      "skill checks"
+      "skill checks",
+      "check"
     ],
     "keywords": [
+      "d20",
       "ability",
       "skill",
-      "check",
-      "d20"
+      "strength",
+      "dexterity",
+      "constitution",
+      "intelligence",
+      "wisdom",
+      "charisma",
+      "challenge"
     ],
-    "preview": "A D20 Test used when a creature attempts an uncertain task.",
-    "text": "A temporary Pocket Rule test entry for Ability Checks."
+    "preview": "A D20 Test made with an ability, sometimes using an associated skill, to overcome a challenge.",
+    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "text": [
+      {
+        "heading": "Ability Check",
+        "body": "An Ability Check is a D20 Test that represents using one of the six abilities, sometimes together with a specific skill, to overcome a challenge."
+      }
+    ],
+    "related": []
   },
+
   {
-    "id": "prone",
-    "name": "Prone",
-    "category": "Condition",
-    "icon": "fa-solid fa-person",
+    "id": "concentration",
+    "name": "Concentration",
+    "category": "Magic",
+    "icon": "fa-solid fa-brain",
     "aliases": [
-      "knocked down",
-      "lying down"
+      "concentrating",
+      "spell concentration",
+      "concentration check",
+      "concentration save"
     ],
     "keywords": [
-      "condition",
-      "ground",
-      "movement"
+      "spell",
+      "magic",
+      "constitution",
+      "saving throw",
+      "damage",
+      "incapacitated",
+      "duration"
     ],
-    "preview": "A condition associated with being down on the ground.",
-    "text": "A temporary Pocket Rule test entry for the Prone condition."
+    "preview": "Some spells and effects require Concentration to stay active and end if Concentration is broken.",
+    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "text": [
+      {
+        "heading": "Maintaining Concentration",
+        "body": "Some spells and other effects require Concentration to remain active. You may end your Concentration voluntarily at any time without using an action."
+      },
+      {
+        "heading": "Another Concentration Effect",
+        "body": "Starting another spell or effect that requires Concentration immediately ends the Concentration you were already maintaining."
+      },
+      {
+        "heading": "Taking Damage",
+        "body": "When you take damage while concentrating, make a Constitution saving throw. The DC is 10 or half the damage taken, rounded down, whichever is higher. The DC cannot exceed 30."
+      },
+      {
+        "heading": "Incapacitated or Dead",
+        "body": "Your Concentration ends if you gain the Incapacitated condition or die."
+      }
+    ],
+    "related": []
   },
+
   {
     "id": "cover",
     "name": "Cover",
@@ -100,72 +84,299 @@
     "aliases": [
       "half cover",
       "three quarters cover",
+      "three-quarter cover",
+      "3/4 cover",
       "total cover"
     ],
     "keywords": [
       "armor class",
       "ac",
       "dexterity",
-      "obstacle"
+      "saving throw",
+      "obstacle",
+      "protection",
+      "target"
     ],
-    "preview": "Rules for protection provided by creatures and obstacles.",
-    "text": "A temporary Pocket Rule test entry for Cover."
+    "preview": "Cover protects a target behind an obstacle, with stronger benefits for greater degrees of cover.",
+    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "text": [
+      {
+        "heading": "Half Cover",
+        "body": "A target with Half Cover gains a +2 bonus to Armor Class and Dexterity saving throws."
+      },
+      {
+        "heading": "Three-Quarters Cover",
+        "body": "A target with Three-Quarters Cover gains a +5 bonus to Armor Class and Dexterity saving throws."
+      },
+      {
+        "heading": "Total Cover",
+        "body": "A target with Total Cover cannot be targeted directly."
+      }
+    ],
+    "related": [
+      "hide"
+    ]
   },
+
+  {
+    "id": "grappled",
+    "name": "Grappled",
+    "category": "Condition",
+    "icon": "fa-solid fa-hand",
+    "aliases": [
+      "grapple",
+      "grabbed",
+      "held",
+      "grappled condition"
+    ],
+    "keywords": [
+      "speed",
+      "movement",
+      "drag",
+      "carry",
+      "attack",
+      "disadvantage",
+      "condition"
+    ],
+    "preview": "Your Speed becomes 0, some attacks are hindered, and the grappler can move you.",
+    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "text": [
+      {
+        "heading": "Speed 0",
+        "body": "Your Speed becomes 0 and cannot be increased while you are Grappled."
+      },
+      {
+        "heading": "Attacks Affected",
+        "body": "You have Disadvantage on attack rolls against targets other than the creature grappling you."
+      },
+      {
+        "heading": "Movable",
+        "body": "The grappler can drag or carry you while moving. Each foot it moves normally costs 1 additional foot unless you are Tiny or at least two sizes smaller than the grappler."
+      }
+    ],
+    "related": [
+      "grappling",
+      "unarmed-strike"
+    ]
+  },
+
+  {
+    "id": "grappling",
+    "name": "Grappling",
+    "category": "Combat",
+    "icon": "fa-solid fa-hands",
+    "aliases": [
+      "grapple",
+      "grappling rules",
+      "escape grapple",
+      "escape a grapple",
+      "ending a grapple"
+    ],
+    "keywords": [
+      "grappled",
+      "unarmed strike",
+      "escape",
+      "athletics",
+      "acrobatics",
+      "free hand",
+      "incapacitated"
+    ],
+    "preview": "Rules for starting, maintaining, and ending a grapple.",
+    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "text": [
+      {
+        "heading": "Starting a Grapple",
+        "body": "Characters usually grapple through an Unarmed Strike, while some creatures have special attacks that grapple. A successful grapple gives the target the Grappled condition."
+      },
+      {
+        "heading": "One Grapple per Hand",
+        "body": "You normally need a free hand to grapple. A hand, tentacle, maw, or other body part used to hold one creature cannot grapple another creature or be used to target another creature unless that grapple ends."
+      },
+      {
+        "heading": "Ending a Grapple",
+        "body": "A Grappled creature can take an action to make a Strength (Athletics) or Dexterity (Acrobatics) check against the grapple's escape DC. Success ends the condition on that creature."
+      },
+      {
+        "heading": "Other Ways It Ends",
+        "body": "The grapple also ends if the grappler becomes Incapacitated or the target moves beyond the grapple's range. The grappler may also release the target at any time without using an action."
+      }
+    ],
+    "related": [
+      "grappled",
+      "unarmed-strike",
+      "ability-check"
+    ]
+  },
+
   {
     "id": "hide",
     "name": "Hide",
     "category": "Action",
     "icon": "fa-solid fa-eye-slash",
     "aliases": [
+      "hide action",
       "hiding",
       "stealth",
-      "hide action"
-    ],
-    "keywords": [
       "hidden",
+      "become hidden"
+    ],
+    "keywords": [
+      "dexterity",
       "stealth",
-      "action",
-      "concealment"
+      "invisible",
+      "perception",
+      "line of sight",
+      "heavily obscured",
+      "cover",
+      "dc 15"
     ],
-    "preview": "The action used when attempting to conceal yourself.",
-    "text": "A temporary Pocket Rule test entry for the Hide action."
+    "preview": "Make a Stealth check from suitable concealment to become hidden until something reveals you.",
+    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "text": [
+      {
+        "heading": "Requirements",
+        "body": "To Hide, make a DC 15 Dexterity (Stealth) check while Heavily Obscured or behind Three-Quarters or Total Cover. You must also be outside every enemy's line of sight."
+      },
+      {
+        "heading": "Successful Check",
+        "body": "On a success, you have the Invisible condition while you remain hidden. Record the total of your Stealth check; that number becomes the DC for a creature trying to find you with Wisdom (Perception)."
+      },
+      {
+        "heading": "Revealing Yourself",
+        "body": "You immediately stop being hidden if you make a sound louder than a whisper, an enemy finds you, you make an attack roll, or you cast a spell that has a Verbal component."
+      }
+    ],
+    "related": [
+      "cover"
+    ]
   },
+
   {
-    "id": "short-rest",
-    "name": "Short Rest",
-    "category": "Rest",
-    "icon": "fa-solid fa-bed",
+    "id": "opportunity-attacks",
+    "name": "Opportunity Attacks",
+    "category": "Combat",
+    "icon": "fa-solid fa-crosshairs",
     "aliases": [
-      "short rests",
-      "rest"
+      "opportunity attack",
+      "attack of opportunity",
+      "attacks of opportunity",
+      "oa",
+      "reaction attack"
     ],
     "keywords": [
-      "healing",
-      "hit dice",
-      "recovery"
+      "reaction",
+      "reach",
+      "movement",
+      "melee",
+      "weapon",
+      "unarmed strike",
+      "leaving reach"
     ],
-    "preview": "A period of downtime used for certain kinds of recovery.",
-    "text": "A temporary Pocket Rule test entry for Short Rests."
+    "preview": "A Reaction that can punish a creature you can see for leaving your reach in certain ways.",
+    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "text": [
+      {
+        "heading": "Trigger",
+        "body": "You can make an Opportunity Attack when a creature you can see leaves your reach by using its action, Bonus Action, Reaction, or one of its speeds."
+      },
+      {
+        "heading": "The Attack",
+        "body": "Use your Reaction to make one melee attack with a weapon or an Unarmed Strike against the triggering creature."
+      },
+      {
+        "heading": "Timing",
+        "body": "The attack happens immediately before the creature leaves your reach."
+      }
+    ],
+    "related": [
+      "reaction",
+      "unarmed-strike"
+    ]
   },
+
   {
-    "id": "death-saving-throw",
-    "name": "Death Saving Throw",
-    "category": "D20 Test",
-    "icon": "fa-solid fa-skull",
+    "id": "prone",
+    "name": "Prone",
+    "category": "Condition",
+    "icon": "fa-solid fa-person-falling",
     "aliases": [
-      "death save",
-      "death saves",
-      "death saving throws"
+      "knocked prone",
+      "knocked down",
+      "lying down",
+      "stand up",
+      "standing up"
     ],
     "keywords": [
-      "dying",
-      "unconscious",
-      "death",
-      "save"
+      "condition",
+      "crawl",
+      "movement",
+      "speed",
+      "advantage",
+      "disadvantage",
+      "attack"
     ],
-    "preview": "A special saving throw associated with being at 0 Hit Points.",
-    "text": "A temporary Pocket Rule test entry for Death Saving Throws."
+    "preview": "While Prone, your movement is restricted and attack rolls are affected by distance.",
+    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "text": [
+      {
+        "heading": "Restricted Movement",
+        "body": "While Prone, you can crawl or spend movement equal to half your Speed, rounded down, to stand and end the condition. If your Speed is 0, you cannot stand this way."
+      },
+      {
+        "heading": "Your Attacks",
+        "body": "You have Disadvantage on attack rolls while Prone."
+      },
+      {
+        "heading": "Attacks Against You",
+        "body": "An attack roll against you has Advantage when the attacker is within 5 feet of you. Otherwise, the attack roll has Disadvantage."
+      }
+    ],
+    "related": [
+      "unarmed-strike"
+    ]
   },
+
+  {
+    "id": "reaction",
+    "name": "Reaction",
+    "category": "Action",
+    "icon": "fa-solid fa-bolt",
+    "aliases": [
+      "reactions",
+      "reaction action"
+    ],
+    "keywords": [
+      "trigger",
+      "turn",
+      "combat",
+      "opportunity attack",
+      "response"
+    ],
+    "preview": "A special response to a defined trigger, normally usable once before the start of your next turn.",
+    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "text": [
+      {
+        "heading": "Triggered Response",
+        "body": "A Reaction is a special action taken in response to a trigger described by the rule that grants the Reaction."
+      },
+      {
+        "heading": "When You Can React",
+        "body": "You can take a Reaction during another creature's turn. You may also take one during your own turn even if you also use an action, a Bonus Action, or both."
+      },
+      {
+        "heading": "One at a Time",
+        "body": "After you take a Reaction, you cannot take another until the start of your next turn."
+      },
+      {
+        "heading": "Common Reaction",
+        "body": "Opportunity Attacks are a Reaction available to all creatures."
+      }
+    ],
+    "related": [
+      "opportunity-attacks"
+    ]
+  },
+
   {
     "id": "unarmed-strike",
     "name": "Unarmed Strike",
@@ -173,19 +384,46 @@
     "icon": "fa-solid fa-hand-fist",
     "aliases": [
       "punch",
+      "kick",
+      "headbutt",
       "unarmed attack",
-      "unarmed strikes"
+      "unarmed attacks",
+      "fist"
     ],
     "keywords": [
+      "melee",
       "attack",
+      "damage",
       "grapple",
       "shove",
-      "combat"
+      "strength",
+      "proficiency",
+      "prone"
     ],
-    "preview": "An attack made without a weapon.",
-    "text": "A temporary Pocket Rule test entry for Unarmed Strikes.",
+    "preview": "Use your body in melee to deal damage, grapple a target, or shove it.",
+    "source": "SRD 5.2.1 / 2024 Rules Glossary",
+    "text": [
+      {
+        "heading": "Unarmed Strike",
+        "body": "An Unarmed Strike is a melee attack using your body against a target within 5 feet. When you make one, choose Damage, Grapple, or Shove."
+      },
+      {
+        "heading": "Damage",
+        "body": "Make an attack roll using your Strength modifier plus your Proficiency Bonus. On a hit, the target takes Bludgeoning damage equal to 1 plus your Strength modifier."
+      },
+      {
+        "heading": "Grapple",
+        "body": "The target chooses a Strength or Dexterity saving throw. On a failure, it becomes Grappled. The save and escape DC equals 8 + your Strength modifier + your Proficiency Bonus. The target can be no more than one size larger than you, and you need a free hand."
+      },
+      {
+        "heading": "Shove",
+        "body": "The target chooses a Strength or Dexterity saving throw against a DC of 8 + your Strength modifier + your Proficiency Bonus. On a failure, you either push it 5 feet away or give it the Prone condition. The target can be no more than one size larger than you."
+      }
+    ],
     "related": [
-      "grappled"
+      "grappling",
+      "grappled",
+      "prone"
     ]
   }
 ]
