@@ -1,1 +1,191 @@
-glossary 
+[
+  {
+    "id": "grappled",
+    "name": "Grappled",
+    "category": "Condition",
+    "icon": "fa-solid fa-hand",
+    "aliases": [
+      "grapple",
+      "grappling"
+    ],
+    "keywords": [
+      "movement",
+      "speed",
+      "condition",
+      "grab"
+    ],
+    "preview": "A condition associated with grappling and movement.",
+    "text": "A temporary Pocket Rule test entry for the Grappled condition.",
+    "related": [
+      "unarmed-strike"
+    ]
+  },
+  {
+    "id": "concentration",
+    "name": "Concentration",
+    "category": "Magic",
+    "icon": "fa-solid fa-brain",
+    "aliases": [
+      "concentrating",
+      "spell concentration"
+    ],
+    "keywords": [
+      "spell",
+      "magic",
+      "saving throw"
+    ],
+    "preview": "Rules for maintaining certain spells and magical effects.",
+    "text": "A temporary Pocket Rule test entry for Concentration."
+  },
+  {
+    "id": "opportunity-attack",
+    "name": "Opportunity Attack",
+    "category": "Combat",
+    "icon": "fa-solid fa-crosshairs",
+    "aliases": [
+      "attack of opportunity",
+      "opportunity attacks",
+      "reaction attack"
+    ],
+    "keywords": [
+      "reaction",
+      "combat",
+      "movement",
+      "melee"
+    ],
+    "preview": "A reaction associated with an enemy moving away from you.",
+    "text": "A temporary Pocket Rule test entry for Opportunity Attacks."
+  },
+  {
+    "id": "ability-check",
+    "name": "Ability Check",
+    "category": "D20 Test",
+    "icon": "fa-solid fa-dice-d20",
+    "aliases": [
+      "skill check",
+      "ability checks",
+      "skill checks"
+    ],
+    "keywords": [
+      "ability",
+      "skill",
+      "check",
+      "d20"
+    ],
+    "preview": "A D20 Test used when a creature attempts an uncertain task.",
+    "text": "A temporary Pocket Rule test entry for Ability Checks."
+  },
+  {
+    "id": "prone",
+    "name": "Prone",
+    "category": "Condition",
+    "icon": "fa-solid fa-person",
+    "aliases": [
+      "knocked down",
+      "lying down"
+    ],
+    "keywords": [
+      "condition",
+      "ground",
+      "movement"
+    ],
+    "preview": "A condition associated with being down on the ground.",
+    "text": "A temporary Pocket Rule test entry for the Prone condition."
+  },
+  {
+    "id": "cover",
+    "name": "Cover",
+    "category": "Combat",
+    "icon": "fa-solid fa-shield-halved",
+    "aliases": [
+      "half cover",
+      "three quarters cover",
+      "total cover"
+    ],
+    "keywords": [
+      "armor class",
+      "ac",
+      "dexterity",
+      "obstacle"
+    ],
+    "preview": "Rules for protection provided by creatures and obstacles.",
+    "text": "A temporary Pocket Rule test entry for Cover."
+  },
+  {
+    "id": "hide",
+    "name": "Hide",
+    "category": "Action",
+    "icon": "fa-solid fa-eye-slash",
+    "aliases": [
+      "hiding",
+      "stealth",
+      "hide action"
+    ],
+    "keywords": [
+      "hidden",
+      "stealth",
+      "action",
+      "concealment"
+    ],
+    "preview": "The action used when attempting to conceal yourself.",
+    "text": "A temporary Pocket Rule test entry for the Hide action."
+  },
+  {
+    "id": "short-rest",
+    "name": "Short Rest",
+    "category": "Rest",
+    "icon": "fa-solid fa-bed",
+    "aliases": [
+      "short rests",
+      "rest"
+    ],
+    "keywords": [
+      "healing",
+      "hit dice",
+      "recovery"
+    ],
+    "preview": "A period of downtime used for certain kinds of recovery.",
+    "text": "A temporary Pocket Rule test entry for Short Rests."
+  },
+  {
+    "id": "death-saving-throw",
+    "name": "Death Saving Throw",
+    "category": "D20 Test",
+    "icon": "fa-solid fa-skull",
+    "aliases": [
+      "death save",
+      "death saves",
+      "death saving throws"
+    ],
+    "keywords": [
+      "dying",
+      "unconscious",
+      "death",
+      "save"
+    ],
+    "preview": "A special saving throw associated with being at 0 Hit Points.",
+    "text": "A temporary Pocket Rule test entry for Death Saving Throws."
+  },
+  {
+    "id": "unarmed-strike",
+    "name": "Unarmed Strike",
+    "category": "Combat",
+    "icon": "fa-solid fa-hand-fist",
+    "aliases": [
+      "punch",
+      "unarmed attack",
+      "unarmed strikes"
+    ],
+    "keywords": [
+      "attack",
+      "grapple",
+      "shove",
+      "combat"
+    ],
+    "preview": "An attack made without a weapon.",
+    "text": "A temporary Pocket Rule test entry for Unarmed Strikes.",
+    "related": [
+      "grappled"
+    ]
+  }
+]
