@@ -2,7 +2,7 @@
   "id": "pocket-rule",
   "title": "Pocket Rule",
   "description": "A compact searchable rules reference for Foundry Virtual Tabletop.",
-  "version": "0.1.7",
+  "version": "0.1.8",
 
   "authors": [
     {
